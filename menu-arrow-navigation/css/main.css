@@ -1,0 +1,17 @@
+div {
+	width: 111px;
+	height: 100px;
+	background-color: rgba(255, 0, 0, .2);
+	display: inline-block;
+	position: absolute;
+}
+div[tabindex] {
+	background-color: rgba(0, 0, 0, .2);
+}
+
+div:nth-child(1) {	margin-left: 250px; }
+div:nth-child(2) {	margin-left: 300px; }
+div:nth-child(3) {	margin-left: 250px; margin-top: 200px; }
+div:nth-child(4) {	margin-left: 150px; margin-top: 100px; }
+div:nth-child(5) {	margin-left: 320px; margin-top: 120px; }
+*:focus { background-color: #F00 !important; }

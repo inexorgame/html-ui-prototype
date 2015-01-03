@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test</title>
+	<link rel="stylesheet" type="text/css" href="./css/main.css" />
+	<script src="./js/jquery.js"></script>
+	<script src="./js/main.js"></script>
+	<script>
+		$(document).ready(function () {
+			animate();
+			toggleTabIndex();
+		});
+		function animate (rev) {
+			if(rev)
+			{
+				$('div:first').animate({
+					"margin-left": "500px",
+					"margin-top" : "250px"
+				}, 5000, function () {
+					animate(!rev);
+				});
+			} else {
+				rev = false;
+				$('div:first').animate({
+					"margin-left": "0px",
+					"margin-top" : "0px"
+				}, 5000, function () {
+					animate(!rev);
+				});
+			}
+		}
+		function toggleTabIndex ()
+		{
+			var t = $('#toggle');
+			if(t.attr('tabindex') === undefined || t.attr('tabindex') === false)
+			{
+				t.attr('tabindex', "0");
+			} else {
+				t.removeAttr('tabindex');
+			}
+			setTimeout(function() { toggleTabIndex(); }, 3500);
+		}
+	</script>
+</head>
+<body>
+	<div tabindex="0" class="object"></div>
+	<div tabindex="0" class="object"></div>
+	<div tabindex="0" class="object"></div>
+	<div tabindex="0" class="object"></div>
+	<div id="toggle" tabindex="0" class="object"></div>
+</body>
+</html>
