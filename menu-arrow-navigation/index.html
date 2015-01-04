@@ -10,6 +10,44 @@
 		$(document).ready(function () {
 			animate();
 			toggleTabIndex();
+			$(document).keypress(function (e) {
+				$('#keypress').text('Keypress: .keyCode ' + e.keyCode + ' .which ' + e.which + ' .charCode ' + e.charCode);
+				if(e.keyCode == 97) $('div').toggleClass('marked');
+			});
+			$(document).keydown(function (e) {
+				$('#keydown').text('Keydown : .keyCode ' + e.keyCode + ' .which ' + e.which + ' .charCode ' + e.charCode);
+			});
+			$(document).click(function (e) {
+				$('div:nth-child(2)').css('opacity', 0).animate({opacity: 1}, 250);
+			});
+			$(document).mousemove(function (e) {
+				$('#mousemove').html('clientX: ' + e.clientX + ' clientY: ' + e.clientY + '<br />offsetX: ' + e.offsetX + ' offsetY: ' + e.offsetY + '<br />pageX  : ' + e.pageX + ' pageY  : ' + e.pageY);
+				$('#mousedrawer').append('<div class="paintpoint" style="left: ' + (e.clientX-1) + 'px; top: ' + (e.clientY-1) + 'px"></div>')
+			});
+			$(document).on('DOMMouseScroll mousewheel', function (e) {
+				if( e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0 ) {
+					$('#scroll').stop().css('opacity', 1).html('Scrolled down').animate({opacity: 0}, 1000);
+				} else {
+					$('#scroll').stop().css('opacity', 1).html('Scrolled up').animate({opacity: 0}, 1000);
+				}
+			});
+			$(document).mousedown(function (e) {
+				var string = '<br />Mousebutton: ';
+				switch(e.which)
+				{
+					case 1:
+						string += 'left';
+						break;
+					case 2:
+						string += 'middle';
+						break;
+					case 3:
+						string += 'right';
+						break;
+				}
+				string += '<br /><br />Position:<br />clientX: ' + e.clientX + ' clientY: ' + e.clientY + '<br />offsetX: ' + e.offsetX + ' offsetY: ' + e.offsetY + '<br />pageX  : ' + e.pageX + ' pageY  : ' + e.pageY;
+				$('#mousedown').html(string);
+			});
 		});
 		function animate (rev) {
 			if(rev)
@@ -49,5 +87,12 @@
 	<div tabindex="0" class="object"></div>
 	<div tabindex="0" class="object"></div>
 	<div id="toggle" tabindex="0" class="object"></div>
+<pre id="keypress"></pre>
+<pre id="keydown"></pre>
+<pre id="mousemove"></pre>
+<pre id="mousedown"></pre>
+<pre id="scroll"></pre>
+<footer id="mousedrawer"></footer>
+<h1><a href="#">Testlink</a></h1>
 </body>
 </html>
