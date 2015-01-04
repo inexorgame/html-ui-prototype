@@ -1,0 +1,117 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	font-family: Hind, Helvetica, Arial, sans-serif;
+}
+body {
+	background: url(../images/game.png);
+	background-size: cover;
+	background-position: center center;
+}
+
+.weapon {
+	background-size: contain;
+	background-position: center center;
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+}
+.weapon-chainsaw { background-image: url(../images/weapons/chainsaw.png); }
+.weapon-chaingun { background-image: url(../images/weapons/chaingun.png); }
+.weapon-pistol { background-image: url(../images/weapons/pistol.png); }
+.weapon-rifleround { background-image: url(../images/weapons/rifleround.png); }
+.weapon-rocket { background-image: url(../images/weapons/rocket.png); }
+.weapon-shotgun { background-image: url(../images/weapons/shotgun.png); }
+
+#test {
+	height: 0;
+	position: fixed;
+}
+
+footer {
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 50%;
+	font-size: 60px;
+	line-height: 65px;
+}
+
+footer .health {
+	width: 50px;
+	height: 100%;
+}
+footer .health .bar {
+	overflow-x: visible;
+	overflow-y: hidden;
+	height: calc(25% - 10px);
+	width: 100%;
+	position: relative;
+	margin-bottom: 10px;
+	vertical-align: bottom;
+}
+footer .health .fill {
+	bottom: 0;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	vertical-align: bottom;
+}
+footer .health .fill .inner {
+	width: calc(100% - 20px);
+	margin: 0 10px; 
+	height: 100%;
+	background-color: rgba(133, 133, 133, .4);
+	box-shadow: 0 0 10px #000;
+}
+footer .health .bar > * {
+	top: -100%;
+}
+footer .health .overflow {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0 10px;
+	width: calc(100% - 20px);
+	background-color: rgba(255, 0, 0, .2);
+}
+footer .abs-health {
+	color: rgba(255, 255, 255, .4);
+	text-shadow: -1px -1px 0 rgba(0, 0, 0, .4), 1px -1px 0 rgba(0, 0, 0, .4), -1px 1px 0 rgba(0, 0, 0, .4), 1px 1px 0 rgba(0, 0, 0, .4);
+	position: absolute;
+	bottom: 0;
+	left: 60px;
+	overflow: hidden;
+}
+footer .health-info {
+	-webkit-transform: perspective(300px) rotateY(17deg);
+	height: 100%;
+	width: 150px;
+	position: absolute;
+	bottom: 40px;
+	left: 20px;
+}
+footer .weapons {
+	-webkit-transform: perspective(300px) rotateY(-17deg);
+	position: absolute;
+	right: 20px;
+	bottom: 40px;
+	border: 10px solid transparent;
+	width: 40px;
+	height: 200px;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, .2);
+}
+footer .weapons .weapon.selected {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	margin: 0;
+	width: 200px;
+	height: 200px;
+}
