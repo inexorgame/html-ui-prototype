@@ -8,9 +8,18 @@
 	<script src="./js/jquery.extended-selectors.js"></script>
 	<script src="./js/jquery.keynavigation.js"></script>
 	<script>
+		// Set listener for arrow-keys
+		$(document).keydown(function (e) {
+			if(e.keyCode >= 37 && e.keyCode <= 40) {
+				$.navigate(e.keyCode);
+			}
+		});
 		$(document).ready(function () {
 			animate();
 			toggleTabIndex();
+			$(document).ready(function () {
+				$(document).addRecursiveNavigation();
+			});
 			$(document).keypress(function (e) {
 				$('#keypress').text('Keypress: .keyCode ' + e.keyCode + ' .which ' + e.which + ' .charCode ' + e.charCode);
 				if(e.keyCode == 97) $('div').toggleClass('marked');

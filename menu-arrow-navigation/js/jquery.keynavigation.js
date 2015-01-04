@@ -172,15 +172,3 @@ $.extend({
 });
 
 }));
-
-(function (document, undefined) {
-	$(document).ready(function () {
-		$(document).addRecursiveNavigation();
-	});
-	// Set listener for arrow-keys
-	$(document).keydown(function (e) {
-		if(e.keyCode >= 37 && e.keyCode <= 40) {
-			$.navigate(e.keyCode);
-		}
-	});
-})(document)
