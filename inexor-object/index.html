@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inexor JS-Object Test</title>
+	<style>
+	* {
+		text-align: right;
+	}
+	</style>
+</head>
+<body>
+<a href="javascript:inexorExists()">Does the inexor object exist?</a><br /><br />
+<a href="javascript:curtimeExists()">What is curtime?</a><br />
+<a href="javascript:curtimeWrite()">Can i write into curtime?</a><br /><br />
+<a href="javascript:lastmillisExists()">What is lastmillis?</a><br />
+<a href="javascript:lastmillisWrite()">Can i write into lastmillis?</a><br /><br />
+<a href="javascript:thirdpersonExists()">What is thirdperson?</a><br />
+<a href="javascript:thirdpersonWrite()">Can i write into thirdperson?</a><br /><br />
+<a href="javascript:startLogoutf()">Start running logoutf!</a><br />
+<a href="javascript:stopLogoutf()">Stop running logoutf!</a><br /><br />
+<a href="javascript:elapsedtimeExists()">What is elapsedtime?</a><br />
+<a href="javascript:elapsedtimeWrite()">Can i write into elapsedtime?</a><br /><br />
+<a href="javascript:totalmillisExists()">What is totalmillis?</a><br />
+<a href="javascript:totalmillisWrite()">Can i write into totalmillis?</a><br /><br />
+<a href="javascript:totalsecsExists()">What is totalsecs?</a><br />
+<a href="javascript:totalsecsWrite()">Can i write into totalsecs?</a><br /><br />
+<pre>
+<strong>Output:</strong><br />
+<span id="output"></span>
+</pre>
+</body>
+<script>
+function addOutput(string) {
+	var output = document.getElementById('output');
+	var html = output.innerHTML + string + '<br />';
+	output.innerHTML = html;
+}
+function inexorExists() {
+	if(typeof inexor == 'object')
+	{
+		addOutput('Inexor object <strong>does exist</strong>!');
+		addOutput()
+	} else {
+		addOutput('Inexor object <strong>does not exist</strong>!');
+	}
+}
+function curtimeExists() {
+	addOutput("Curtime: " + inexor.curtime);
+}
+function curtimeWrite() {
+	addOutput("Trying to set curtime to 100!");
+	inexor.curtime = 100;
+	addOutput("Curtime is now: " + inexor.curtime);
+}
+function lastmillisExists() {
+	addOutput("lastmillis: " + inexor.lastmillis);
+}
+function lastmillisWrite() {
+	addOutput("Trying to set lastmillis to 200!");
+	inexor.lastmillis = 200;
+	addOutput("lastmillis is now: " + inexor.lastmillis);
+}
+function elapsedtimeExists() {
+	addOutput("elapsedtime: " + inexor.elapsedtime);
+}
+function elapsedtimeWrite() {
+	addOutput("Trying to set elapsedtime to 400!");
+	inexor.lastmillis = 400;
+	addOutput("elapsedtime is now: " + inexor.elapsedtime);
+}
+function totalmillisExists() {
+	addOutput("totalmillis: " + inexor.totalmillis);
+}
+function totalmillisWrite() {
+	addOutput("Trying to set totalmillis to 500!");
+	inexor.lastmillis = 500;
+	addOutput("totalmillis is now: " + inexor.totalmillis);
+}
+function totalsecsExists() {
+	addOutput("totalsecs: " + inexor.totalsecs);
+}
+function totalsecsWrite() {
+	addOutput("Trying to set totalsecs to 550!");
+	inexor.lastmillis = 550;
+	addOutput("totalsecs is now: " + inexor.totalsecs);
+}
+
+
+function thirdpersonExists() {
+	addOutput("thirdperson: " + inexor.thirdperson);
+}
+function thirdpersonWrite() {
+	addOutput("Trying to set thirdperson to 2!");
+	inexor.thirdperson = 2;
+	addOutput("lastmillis is now: " + inexor.thirdperson);
+}
+var loginterval;
+function startLogoutf() {
+	addOutput("Starting logoutf!");
+	loginterval = setInterval(function () {
+		addOutput("logoutf: " + inexor.logoutf());
+	}, 5000);
+	addOutput("logoutf: " + inexor.logoutf());
+}
+function stopLogoutf() {
+	clearInterval(loginterval);
+	addOutput("Stopped logoutf!");
+}
+</script>
+</html>
