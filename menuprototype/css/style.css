@@ -1,0 +1,132 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	width: 100%;
+	background: transparent;
+	font-family: Hind, Arial, Helvetica, sans-serif;
+	font-weight: 100;
+	letter-spacing: 1px;
+	font-size: 30px;
+}
+body {
+	overflow: scroll;
+}
+a {
+	color: inherit;
+	text-decoration: inherit;
+	cursor: pointer;
+}
+p {
+	margin: 0;
+	padding: 0 20px;
+}
+*:focus {
+	outline: none;
+}
+input[type=text], input[type=password], input[type=number] {
+	padding: 10px;
+	margin: 0 10px 10px 10px;
+	font-size: 1em;
+	width: calc(100% - 42px);
+	border: none;
+}
+input[type=checkbox], input[type=radio] {
+	-webkit-appearance: none;
+	cursor: pointer;
+	width: 16px;
+	height: 16px;
+	border-radius: 3px;
+	box-shadow: inset 0 0 3px #CCC;
+	border: 1px solid #000;
+}
+input[type=checkbox]:checked, input[type=radio]:checked {
+	box-shadow: 0 0 10px #FFF;
+	border: #FFF;
+	background-color: #FFF;
+}
+input[type=radio] {
+	border-radius: 50%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 100;
+	padding: 5px 0;
+	margin: 0;
+}
+.menu > .inner {
+	padding: 0 20px;
+}
+.logo.minified {
+	float: left;
+	width: 250px;
+	height: 170px;
+}
+.logo-spacer {
+	margin: 5% 0;
+	height: 170px;
+	display: block;
+}
+
+#jump-preventer {
+	-webkit-transition: all .5s;
+	display: inline-block;
+}
+
+.content .content-spacer {
+	width: 10%;
+	display: inline-block;
+}
+
+#surface {
+	padding: 0 10%;
+	min-width: 80%;
+	z-index: 20;
+}
+#surface > .content {
+	white-space: nowrap;
+}
+.clicked, .clicked:hover, .clicked:focus {
+	background-color: #444 !important;
+}
+.menu .spacer {
+	display: block;
+	height: 2px;
+	margin: 20px 20px;
+	background-color: #666;
+	box-shadow: 0 0 5px #666;
+}
+.menu {
+	white-space: normal;
+	max-width: 80%;
+	-webkit-transition: all, .5s;
+	transition: all, .5s;
+	vertical-align: top;
+	display: inline-block;
+	padding: 20px 0;
+	background: #333;
+	color: #FFF;
+	display: none;
+}
+.menu.selected {
+	display: inline-block;
+}
+.menu.preview {
+	display: inline-block;
+	background: #666;
+}
+.menu-listing {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.menu-listing > li > a {
+	display: block;
+	padding: 0 20px;
+}
+.menu-listing > li > a:hover, .menu-listing > li > a:focus {
+	background-color: #666;
+}
+.setting {
+	display: block;
+	white-space: nowrap;
+}

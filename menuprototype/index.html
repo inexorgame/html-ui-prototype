@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Inexor</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="stylesheet" href="./css/logo.css" />
+	<link rel="stylesheet" href="./fonts/hind/Hind.css" />
+	<script src="./js/jquery.js"></script>
+	<script src="./js/jquery.blur.js"></script>
+	<script src="./js/jquery.menu.js"></script>
+	<script src="./js/jquery.keynavigation.js"></script>
+	<script src="./js/jquery.extended-selectors.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function () {
+		$('.tile').blurLoop();
+		$('.logo').addClass('minified');
+		$('.menu a, .menu *:focusable').menu();
+		$(document).keydown(function (e) {
+			if(e.keyCode >= 37 && e.keyCode <= 40) {
+				$.navigate(e.keyCode);
+				e.preventDefault();
+			}
+		});
+	});
+	</script>
+</head>
+<body>
+	<div class="logo">
+		<div class="top">
+			<div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+		</div>
+		<div class="bottom">
+			<div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div><div class="tile"></div>
+		</div>
+	</div>
+	<div class="logo-spacer"></div>
+	<div id="surface">
+		<div class="content">
+			<!-- ### Main Menu ### -->
+			<div id="menu-main" class="menu selected" data-enabled="1" data-level="1">
+				<input type="text" placeholder="name" data-variable="name" maxlength="15" size="15" />
+				<ul class="menu-listing">
+					<li><a data-load="menu-model">model</a></li>
+					<li><a data-load="menu-crosshair">crosshair</a></li>
+					<li class="spacer"></li>
+					<li><a data-load="menu-server-browser">server browser</a></li>
+					<li><a data-load="menu-bot-match">bot match</a></li>
+					<li class="spacer"></li>
+					<li><a data-load="menu-options">options</a></li>
+					<li><a href="javascript:inexor.quit();">quit</a></li>
+				</ul>
+			</div><!--
+		 --><div id="menu-model" class="menu" data-level="2" data-parent="menu-main">
+				<ul class="menu-listing">
+					<li><a>Mr. Fixit</a></li>
+					<li><a>IronSnout X10K</a></li>
+					<li><a>Ogro</a></li>
+					<li><a>Inky <small>(i dare you! Do not choose this one)</small></a></li>
+					<li><a>Captain Cannon</a></li>
+				</ul>
+			</div><!-- ### Crosshair-Menu ###
+		 --><div id="menu-crosshair" class="menu" data-level="2" data-parent="menu-main">
+				<p>Later you will be able to choose your crosshair here!</p>
+			</div><!-- ### Server-Browser ###
+		 --><div id="menu-server-browser" class="menu" data-level="2" data-parent="menu-main">
+				<p>Later you will be able to connect to a server from here!</p>
+			</div><!-- ### Bot-Match selector ###
+		 --><div id="menu-bot-match" class="menu" data-level="2" data-parent="menu-main">
+		 		<input type="number" placeholder="bot amount" size="3" />
+		 		<input type="number" placeholder="bot minimum skill" min="50" max="100" size="3" />
+		 		<input type="number" placeholder="bot maximum skill" min="50" max="100" size="3" />
+		 		<ul class="menu-listing">
+		 			<li><a data-load="menu-bot-match-start">start match</a></li>
+		 		</ul>
+			</div><!-- ### Options ###
+		 --><div id="menu-options" class="menu" data-level="2" data-parent="menu-main">
+		 		<ul class="menu-listing">
+					<li><a data-load="menu-options-game">game</a></li>
+					<li><a>gfx</a></li>
+					<li><a>resolution</a></li>
+					<li><a>sound</a></li>
+					<li><a>mouse</a></li>
+					<li><a>keys</a></li>
+					<li><a>console</a></li>
+					<li><a>autoexec.json</a></li>
+				</ul>
+			</div><!--
+		 --><div id="menu-options-game" class="menu" data-level="3" data-parent="menu-options">
+				<div class="inner">
+					<input type="checkbox" id="checkbox-showfps" /> <label for="checkbox-showfps">show FPS</label><br />
+					<input type="checkbox" id="checkbox-wallclock" /> <label for="checkbox-wallclock">wallclock</label><br />
+					<input type="checkbox" id="checkbox-deathscoreboard" /> <label for="checkbox-deathscoreboard">scoreboard on death</label><br />
+					<h3>Damage</h3>
+					<input type="checkbox" id="checkbox-damagescreen" /> <label for="checkbox-damagescreen">damage screen</label>
+					<input type="checkbox" id="checkbox-damagecompass" /> <label for="checkbox-damagecompass">damage compass</label>
+				</div>
+			</div><!--
+		 -->
+
+			<div class="content-spacer"></div>
+		</div>
+	</div>
+	<div id="jump-preventer"></div>
+</body>
+</html>
