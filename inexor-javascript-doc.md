@@ -1,6 +1,6 @@
 # inexor javascript documentation
 
-State: 07.01.2015
+State: 08.01.2015
 
 This is the documentation for the inexor-object in javascript.
 You can find all included functions and variables in the **/src/ui/cefcontext.cpp** file.
@@ -16,11 +16,13 @@ Callback is fired when the game or the a script itself fires the event.
 
 Possible subscriptions user-created ones (see _inexor.fire_) and the following predefined ones:
 
-| eventname       | callback-parameters (in this order) | called when                      |
-|-----------------|-------------------------------------|----------------------------------|
-| frag            | int victim-cn, int fragger-cn       | one player frags another one     |
-| healthChange    | int difference                      | the player looses / gains health |
-| maxHealthChange | int difference                      | a player gets a healthboost      |
+| eventname       | callback-parameters (in this order)    | called when                                           |
+|-----------------|----------------------------------------|-------------------------------------------------------|
+| frag            | int victim-cn, int fragger-cn          | one player frags another one                          |
+| healthChange    | int difference                         | the player looses / gains health                      |
+| maxHealthChange | int difference                         | the player gets a healthboost                         |
+| ammoChange      | string weapon, int newAmmunitionAmount | the player **gets** ammunition, **not** when he shots |
+| shot            | string weapon                          | the player shoots                                     |
 
 **These events can still be fired by a script.**
 
