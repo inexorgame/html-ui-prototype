@@ -60,25 +60,25 @@ Quits the game.
 
 ## Variables
 
-| Variablename              | Readonly |
-|----------------------------|----------|
-| int curtime                | yes      |
-| int lastmillis             | yes      |
-| int elapsedtime            | yes      |
-| int totalmillis            | yes      |
-| int totalsecs              | yes      |
-| int fps                    | yes      |
-| int health                 | yes      |
-| int maxHealth              | yes      |
-| object ammo                | yes      |
-| int inexor.ammo.rifleround | yes      |
-| int inexor.ammo.rocket     | yes      |
-| int inexor.ammo.chaingun   | yes      |
-| int inexor.ammo.shotgun    | yes      |
-| int inexor.ammo.pistol     | yes      |
-| int inexor.ammo.grenade    | yes      |
-| int thirdperson            | no       |
-| int scr_w                  | no       |
-| int scr_h                  | no       |
-| int vsync                  | no       |
-| string name                | no       |
+| Variablename        | Readonly |
+|---------------------|----------|
+| int curtime         | yes      |
+| int lastmillis      | yes      |
+| int elapsedtime     | yes      |
+| int totalmillis     | yes      |
+| int totalsecs       | yes      |
+| int fps             | yes      |
+| int health          | yes      |
+| int maxHealth       | yes      |
+| object ammo         | yes      |
+| int ammo.rifleround | yes      |
+| int ammo.rocket     | yes      |
+| int ammo.chaingun   | yes      |
+| int ammo.shotgun    | yes      |
+| int ammo.pistol     | yes      |
+| int ammo.grenade    | yes      |
+| int thirdperson     | no       |
+| int scr_w           | no       |
+| int scr_h           | no       |
+| int vsync           | no       |
+| string name         | no       |
