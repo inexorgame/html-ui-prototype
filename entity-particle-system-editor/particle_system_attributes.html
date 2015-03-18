@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Partikelsystem</title>
+
+<style>
+
+body {
+	background-image:url('http://gstf-clan.de/img/backgrounds/screenshots/nmp8.jpg');
+}
+
+#centered_menu 
+{
+	/*disallow selection*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    color:white;
+	text-shadow:1px 1px 1px black;
+	font-family:arial,verdana,courier;
+	width:500px;
+	height:650px;
+	border:rgba(0,0,0, 0.4) 1px solid;
+	background-color:rgba(0,0,0, 0.7);
+	border-radius:10px;
+	padding:10px;
+	position:absolute;
+	left:50%;
+	top:50%;
+	margin-left:-250px;
+	margin-top:-325px;
+	box-shadow: 2px 2px 10px 1px black;
+}
+
+.headline_class 
+{
+	font-size:20px;
+}
+
+.close_button_class {
+	position:absolute;
+	left:93.5%;
+	top:10px;
+	padding:2px;
+	background-color:rgba(0,0,0, 0.1);
+	width:10px;
+	height:10px;
+	text-align:center;
+	padding:2px 6px 10px 6px;
+	font-size:16px;
+	cursor:pointer;
+	border-radius:2px;
+	border:rgba(0,0,0, 0.4) 1px solid;
+}
+.close_button_class:hover {
+	background-color:red;
+	border:rgba(0,0,0,0.6) 1px solid;
+	box-shadow:0px 0px 4px 1px rgba(0,0,0,0.4);
+}
+
+.textfield_class {
+	color:white;
+	padding:2px;
+	text-shadow:1px 1px 1px black;
+	border:1px solid rgb(48, 48, 48);
+	background-color:rgb(63, 63, 63);
+	height:20px;
+	width:80px; /*Maximale Länge beschränken*/
+	margin:0px 0px 0px 10px; /*Links und rechts Abstand lassen*/
+}
+.large_textfield {
+	width:200px;
+}
+.select_class {
+	height:25px;
+	width:150px;
+}
+.checkbox_class {
+	border:0px;
+	margin:0px;
+}
+.button_class {
+	color:white;
+	text-shadow:1px 1px 1px black;
+	border:1px solid rgb(48, 48, 48);
+	background-color:rgb(63, 63, 63);
+	height:30px;
+	width:80px;
+	margin:0px;
+}
+.button_class:hover {
+	background-color:gray;
+}
+
+.space_class {
+	margin-left:30px;
+}
+
+label {
+	cursor:pointer;
+}
+hr {
+	margin-bottom:20px;
+}
+a {
+	color:white;
+	text-shadow:1px 1px 1px black;
+	text-decoration:none;
+}
+a:hover {
+	text-decoration:underline;
+}
+
+</style>
+
+</head>
+<body>
+	<div id="centered_menu">
+		<div class="headline_class">New Particle System: Entity attributes<span class="close_button_class">X</span></div>
+		<hr>
+		<!--Special attributes<span class="space_class"></span>-->
+		<input id="CheckBox1" class="checkbox_class" type="checkbox"></input>
+		<label for="CheckBox1">active</label>
+		<span class="space_class"></span>
+		<input id="CheckBox2" class="checkbox_class" type="checkbox"></input>
+		<label for="CheckBox2">visible</label>
+		<span class="space_class"></span>
+		<input id="CheckBox3" class="checkbox_class" type="checkbox"></input>
+		<label for="CheckBox3">receives gravity</label>
+		<br>
+		<br>
+		position<span class="space_class"></span>
+		x<input class="textfield_class" type="text" alt="" title="" value="1203.23">
+		y<input class="textfield_class" type="text" alt="" title="" value="1203.23">
+		z<input class="textfield_class" type="text" alt="" title="" value="1203.23">
+		<br>
+		<br>
+		name<span class="space_class"></span>
+		<input class="textfield_class large_textfield" type="text" alt="" title="" value="Hallo Namensfeld">
+		<br>
+		<br>
+		typ<span class="space_class"></span>
+		<select class="textfield_class select_class">
+			<option>Emitter</option>
+			<option>Modifer</option>
+			<option>Gravity Point</option>
+			<option>Curve</option>
+			<option>Torus Know</option>
+		</select>
+		<br>
+		<br>
+		password
+		<input class="textfield_class" type="password" alt="" title="" value="pwd1">
+		<input class="textfield_class" type="password" alt="" title="" value="pwd1">
+		<br>
+		<br>
+		test<span class="space_class"></span>
+		<input type="radio" class="checkbox_class" id="RadioButton1" name="RadBut" value="male" checked>
+		<label for="RadioButton1">male</label>
+		<span class="space_class"></span>
+		<input type="radio" class="checkbox_class" id="RadioButton2" name="RadBut" value="male" checked>
+		<label for="RadioButton2">female</label>
+		<br>
+		<br>
+		<img src="http://upload.wikimedia.org/wikipedia/commons/0/05/C2_underwater_2.png" style="width:250px; height:auto;">
+		<br>
+		<br>
+		<input type="button" class="button_class" onclick="alert('Hello World!')" value="Button1">
+		<input type="button" class="button_class" onclick="alert('Hello World!')" value="Button2">
+		<input type="button" class="button_class" onclick="alert('Hello World!')" value="Button3">
+		<br>
+		<br>
+		pick a date and a color<input type="date" style="width:150px;" class="textfield_class">
+		<input type="color" class="textfield_class">
+		<br>
+		<br>
+		<input type="range" name="points" min="0" max="10"><span class="space_class"></span><a href="http://de.wikipedia.org/wiki/Arrhenius-Gleichung" target="_blank">link to Arrhenius' equation</a>
+	</div>
+</body>
+</html>
