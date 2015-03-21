@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Scoreboard</title>
+
+<style type="text/css">
+body {
+	/* for testing purposes only... */
+	background-image:url('http://www.gstf-clan.de/downloads/background3.png');
+	background-position:top center;
+	background-color:black;
+	background-repeat:no-repeat;
+
+	font-family:verdana, arial, courier;
+	font-size:20px;
+	color:black;
+	text-align:center;
+}
+
+.scoreboard {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:500px;
+	height:auto;
+	margin-left: -250px;
+	margin-top: -160px;
+	/* simple transparent black is boring? */
+	/* background-color:rgba(255,255,255, 0.4);*/
+	background-image:linear-gradient(rgb(36, 69, 78) 0%, rgba(0, 0, 0, 0.72) 100%);
+	border:rgba(255,255,255, 0.5) 1px solid;
+	border-radius:10px;
+	box-shadow: 0px 0px 10px 1px rgba(0,0,0,1);
+}
+
+.headline {
+	text-shadow: 1px 1px 1px black;
+	color:white;
+}
+
+table {
+	width:100%;
+}
+td {
+    text-align:center;
+    padding:2px;
+}
+/* do not apply centered text to cn and name */
+td:nth-child(1), td:nth-child(2) {
+    text-align:left;
+}
+/* implement striped scoreboard and highlighting */
+tr:nth-child(2n) {
+	background-color:rgba(255, 255, 255, 0.05);
+}
+/*tr:nth-child(2n+1) {
+	background-color:rgba(255,255,255, 0.3);
+}*/
+
+</style>
+</head>
+
+<body>
+<div class="scoreboard">
+  <div class="headline" style="padding:10px;">Inexor game server #5
+    <div style="font-size:14px;">
+    	284.192.44.246:1337 | 10/16 | 100% | 07:03<br>
+    	instagib capture_night
+    </div>
+  </div>
+  <hr> <!-- I know it is old fashioned but it works fine :) -->
+  <div style="font-size:16px; padding:10px;" class="headline">
+    <table>
+      <tr>
+       <td>cn</td>
+       <td>name</td>
+       <td>col1</td>
+       <td>col2</td>
+       <td>col3</td>
+       <td>col4</td>
+       <td>col5</td>
+       <td>col6</td>
+      </tr>
+      <tr>
+       <td>0</td>
+       <td>VurtDaFurk</td>
+       <td>87</td>
+       <td>2</td>
+       <td>0</td>
+       <td>44%</td>
+       <td>7/8</td>
+       <td>yes</td>
+      </tr>
+      <tr>
+       <td>1</td>
+       <td>Gesichtswindel</td>
+       <td>77</td>
+       <td>2</td>
+       <td>0</td>
+       <td>44%</td>
+       <td>7/8</td>
+       <td>no</td>
+      </tr>
+      <tr>
+       <td>2</td>
+       <td>Andi-Latte</td>
+       <td>60</td>
+       <td>2</td>
+       <td>0</td>
+       <td>44%</td>
+       <td>7/8</td>
+       <td>yes</td>
+      </tr>
+      <tr>
+       <td>12</td>
+       <td>[SGT]Inexornoob</td>
+       <td>53</td>
+       <td>2</td>
+       <td>0</td>
+       <td>44%</td>
+       <td>7/8</td>
+       <td>yes</td>
+      </tr>
+      <tr>
+       <td>4</td>
+       <td>EllenLang??</td>
+       <td>50</td>
+       <td>2</td>
+       <td>0</td>
+       <td>44%</td>
+       <td>7/8</td>
+       <td>yes</td>
+      </tr>
+      <tr>
+       <td>11</td>
+       <td>elEKTROGRILL</td>
+       <td>50</td>
+       <td>2</td>
+       <td>0</td>
+       <td>44%</td>
+       <td>7/8</td>
+       <td>yes</td>
+      </tr>
+      <tr>
+       <td>23</td>
+       <td>VladimirsPute!</td>
+       <td>49</td>
+       <td>2</td>
+       <td>0</td>
+       <td>44%</td>
+       <td>7/8</td>
+       <td>no</td>
+      </tr>
+      <tr>
+       <td>14</td>
+       <td>Popelpistole93</td>
+       <td>31</td>
+       <td>2</td>
+       <td>0</td>
+       <td>44%</td>
+       <td>7/8</td>
+       <td>yes</td>
+      </tr>
+      <tr>
+       <td>6</td>
+       <td>[FCB]OlliKahn</td>
+       <td>29</td>
+       <td>2</td>
+       <td>0</td>
+       <td>44%</td>
+       <td>7/8</td>
+       <td>yes</td>
+      </tr>
+      <tr>
+       <td>9</td>
+       <td>Pimpelhuber</td>
+       <td>20</td>
+       <td>2</td>
+       <td>0</td>
+       <td>44%</td>
+       <td>7/8</td>
+       <td>yes</td>
+      </tr>
+    </table>
+  </div>
+</div>
+	
+</body>
+</html>
