@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Inexor: Voting system test</title>
+
+<style type="text/css">
+body {
+   /* temporary background image provider to improve visual appearance of this suggestion */
+   background-image:url('http://www.gstf-clan.de/downloads/background4.png');
+   font-family: arial, verdana, courier;
+   color:white;
+   text-shadow: 0px 1px 1px black;
+   text-align:center;
+}
+#vote_box {
+	position:absolute;
+	left:0px;
+	top:50%;
+	width:200px;
+	height:230px;
+	margin-top: -90px;
+	padding:5px;
+	background-color: rgba(0,0,0, 0.7);
+	/* border-top-right-radius:20px;
+	border-bottom-right-radius:20px; */
+}
+
+/* We should probably not call this options (?) */
+.vote_options {
+	margin:15px;
+	text-align:left;
+	/* color:rgb(255, 64, 64); */
+}
+
+.number_box {
+	/* border: 1px solid white; */
+	width:10px;
+	height:10px;
+	margin-right:10px;
+	color:gray;
+}
+
+code {
+	font-size:22px;
+	margin-right:5px;
+	text-shadow:none;
+}
+
+</style>
+
+</head>
+<body>
+   <div id="vote_box">
+      Would you like to change the current map to <b>reissen</b>?
+      <div class="vote_options">
+         <span class="number_box">3</span><code>F1</code>yes<br>
+         <span class="number_box">4</span><code>F1</code>no<br>
+         <span class="number_box">1</span><code>F1</code>why not both?<br></span>
+         <span class="number_box">7</span><code>F1</code>why not duomo?<br>
+      </div>
+      <i>press a key to vote</i><br>
+      vote called by: nothing
+   </div>
+</body>
+</html>
