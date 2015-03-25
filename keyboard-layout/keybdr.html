@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Keyboard layout test</title>
+
+<style type="text/css">
+body {
+	/* temporary background image hoster */
+	background-image:url('http://www.gstf-clan.de/downloads/background4.png');
+	background-color:red;
+	font-size:16px;
+	font-family:arial,verdana,courier;
+	color:white;
+	text-shadow: 0px 1px 1px black;
+}
+#keyboard_layout {
+	position:absolute;
+	left:50%;
+	top:50%;
+	width:1160px;
+	height:400px;
+	margin-left: -580px;
+	margin-top: -200px;
+	background-color:rgba(0,0,0,0.8);
+	border-radius:10px;
+	box-shadow: 0px 0px 10px 1px black;
+	border:black 1px solid;
+}
+select {
+	color:white;
+	width:260px;
+	height:30px;
+	font-family:arial;
+	border:rgba(255,255,255, 0.5) 1px solid;
+	text-shadow: 0px 1px 1px black;
+	background-color:transparent;
+	font-size:16px;
+}
+
+#key_block {
+	position:absolute;
+	left:10px;
+	top:80px;
+	width:800px;
+	height:300px;
+}
+
+#system_navigation_block {
+	position:absolute;
+	left:100%;
+	top:80px;
+	width:200px;
+	margin-left: -410px;
+	height:300px;
+}
+
+#num_block {
+	position:absolute;
+	left:100%;
+	top:80px;
+	width:220px;
+	margin-left: -210px;
+	height:300px;
+}
+
+
+.key {
+	position:absolute;
+	background:linear-gradient(rgb(93, 93, 93) 0%,rgb(0, 102, 95) 100%);
+	width:40px;
+	height:40px;
+	font-size:14px;
+	font-family:courier;
+	text-align:center;
+	cursor:pointer;
+	border-radius:3px;
+	line-height:40px;
+}
+.key:hover {
+	background:linear-gradient(rgb(255, 185, 185) 0%, rgb(251, 194, 0) 100%);
+}
+small {
+	font-size:8px;
+}
+big {
+	font-size:30px;
+}
+</style>
+
+
+
+</head>
+<body>
+   <div id="keyboard_layout">
+      <div style="margin:10px;">
+         Edit keyboard layout for:
+         <select>
+            <option>gameplay (all game modes)</option>
+            <option>dead (waiting for respawn)</option>
+            <option>spectator</option>
+            <option>intermission</option>
+            <option>coop editing</option>
+            <option>main menu</option>
+        </select>
+        <br>
+        This symbolic keyboard layout may differs from your actual keyboard shape.
+        
+        <div id="key_block">
+
+           <!-- Escape button -->
+           <div class="key" style="left:0px; top:0px;">Esc</div>
+           <!--  F1-F4  -->
+           <div class="key" style="left:80px; top:0px;">F1</div>
+           <div class="key" style="left:130px; top:0px;">F2</div>
+           <div class="key" style="left:180px; top:0px;">F3</div>
+           <div class="key" style="left:230px; top:0px;">F4</div>
+			<!-- F5-F8 -->
+           <div class="key" style="left:300px; top:0px;">F5</div>
+           <div class="key" style="left:350px; top:0px;">F6</div>
+           <div class="key" style="left:400px; top:0px;">F7</div>
+           <div class="key" style="left:450px; top:0px;">F8</div>
+			<!-- F9-F12 -->
+           <div class="key" style="left:520px; top:0px;">F9</div>
+           <div class="key" style="left:570px; top:0px;">F10</div>
+           <div class="key" style="left:620px; top:0px;">F11</div>
+           <div class="key" style="left:670px; top:0px;">F12</div>
+
+
+		   <!--  -->
+           <div class="key" style="left:0px; top:70px;">^</div>
+           <div class="key" style="left:50px; top:70px;">1</div>
+           <div class="key" style="left:100px; top:70px;">2</div>
+           <div class="key" style="left:150px; top:70px;">3</div>
+           <div class="key" style="left:200px; top:70px;">4</div>
+           <div class="key" style="left:250px; top:70px;">5</div>
+           <div class="key" style="left:300px; top:70px;">6</div>
+           <div class="key" style="left:350px; top:70px;">7</div>
+           <div class="key" style="left:400px; top:70px;">8</div>
+           <div class="key" style="left:450px; top:70px;">9</div>
+           <div class="key" style="left:500px; top:70px;">0</div>
+           <div class="key" style="left:550px; top:70px;">?</div>
+           <div class="key" style="left:600px; top:70px;">`</div>
+           <!-- back key -->
+           <div class="key" style="left:650px; top:70px; width:100px;"><big>←</big></div>
+
+
+
+           <div class="key" style="left:0px; top:120px; width:80px;">TAB</div>
+           <div class="key" style="left:90px; top:120px;">Q</div>
+           <div class="key" style="left:140px; top:120px;">W</div>
+           <div class="key" style="left:190px; top:120px;">E</div>
+           <div class="key" style="left:240px; top:120px;">R</div>
+           <div class="key" style="left:290px; top:120px;">T</div>
+           <div class="key" style="left:340px; top:120px;">Y</div>
+           <div class="key" style="left:390px; top:120px;">U</div>
+           <div class="key" style="left:440px; top:120px;">I</div>
+           <div class="key" style="left:490px; top:120px;">O</div>
+           <div class="key" style="left:540px; top:120px;">P</div>
+           <div class="key" style="left:590px; top:120px;">{</div>
+           <div class="key" style="left:640px; top:120px;">}</div>
+
+
+
+           <div class="key" style="left:0px; top:170px; width:65px;"><big>↓</big></div>
+           <div class="key" style="left:75px; top:170px;">A</div>
+           <div class="key" style="left:125px; top:170px;">S</div>
+           <div class="key" style="left:175px; top:170px;">D</div>
+           <div class="key" style="left:225px; top:170px;">F</div>
+           <div class="key" style="left:275px; top:170px;">G</div>
+           <div class="key" style="left:325px; top:170px;">H</div>
+           <div class="key" style="left:375px; top:170px;">J</div>
+           <div class="key" style="left:425px; top:170px;">K</div>
+           <div class="key" style="left:475px; top:170px;">L</div>
+           <div class="key" style="left:525px; top:170px;">Ö</div>
+           <div class="key" style="left:575px; top:170px;">Ä</div>
+           <div class="key" style="left:625px; top:170px;">#</div>
+
+
+
+           <div class="key" style="left:0px; top:220px; width:50px;"><big>↑</big></div>
+           <div class="key" style="left:60px; top:220px;">|</div>
+           <div class="key" style="left:110px; top:220px;">Z</div>
+           <div class="key" style="left:160px; top:220px;">X</div>
+           <div class="key" style="left:210px; top:220px;">C</div>
+           <div class="key" style="left:260px; top:220px;">V</div>
+           <div class="key" style="left:310px; top:220px;">B</div>
+           <div class="key" style="left:360px; top:220px;">N</div>
+           <div class="key" style="left:410px; top:220px;">M</div>
+           <div class="key" style="left:460px; top:220px;">,</div>
+           <div class="key" style="left:510px; top:220px;">.</div>
+           <div class="key" style="left:560px; top:220px;">/</div>
+           <div class="key" style="left:610px; top:220px; width:130px;">^</div>
+
+
+           <div class="key" style="left:0px; top:270px; width:50px;">CTRL</div>
+           <div class="key" style="left:60px; top:270px; width:50px;">WIN</div>
+           <div class="key" style="left:120px; top:270px;">Alt</div>
+           <div class="key" style="left:170px; top:270px; width:340px;">Space</div>
+           <div class="key" style="left:520px; top:270px;">Alt</div>
+           <div class="key" style="left:570px; top:270px;">CTX</div>
+           <div class="key" style="left:620px; top:270px; width:120px;">CTRL</div>
+
+
+        </div>
+
+        <!-- system keys -->
+        <div id="system_navigation_block">
+           <div class="key" style="left:40px; top:0px;">Print</div>
+           <div class="key" style="left:90px; top:0px;">Scroll</div>
+           <div class="key" style="left:140px; top:0px;">Pause</div>
+
+           <div class="key" style="left:40px; top:70px;">Insert</div>
+           <div class="key" style="left:90px; top:70px;">Home</div>
+           <div class="key" style="left:140px; top:70px;">Up</div>
+
+           <div class="key" style="left:40px; top:120px;">Delete</div>
+           <div class="key" style="left:90px; top:120px;">End</div>
+           <div class="key" style="left:140px; top:120px;">Down</div>
+
+
+           <div class="key" style="left:40px; top:270px;">&larr;</div>
+           <div class="key" style="left:90px; top:220px;">&uarr;</div>
+           <div class="key" style="left:90px; top:270px;">&darr;</div>
+           <div class="key" style="left:140px; top:270px;">&rarr;</div>
+        </div>
+
+        <div id="num_block">
+           <div class="key" style="left:10px; top:70px;">Num</div>
+           <div class="key" style="left:60px; top:70px;">/</div>
+           <div class="key" style="left:110px; top:70px;">*</div>
+           <div class="key" style="left:160px; top:70px;">-</div>
+
+           <div class="key" style="left:10px; top:120px;">7</div>
+           <div class="key" style="left:60px; top:120px;">8</div>
+           <div class="key" style="left:110px; top:120px;">9</div>
+
+           <div class="key" style="left:160px; top:120px; height:90px;">+</div>
+
+           <div class="key" style="left:10px; top:170px;">4</div>
+           <div class="key" style="left:60px; top:170px;">5</div>
+           <div class="key" style="left:110px; top:170px;">6</div>
+
+           <div class="key" style="left:10px; top:220px;">1</div>
+           <div class="key" style="left:60px; top:220px;">2</div>
+           <div class="key" style="left:110px; top:220px;">3</div>
+
+           <div class="key" style="left:160px; top:220px; height:90px;">Enter</div>
+
+           <div class="key" style="left:10px; top:270px; width:90px;">0</div>
+           <div class="key" style="left:110px; top:270px;">Del</div>
+
+        </div>
+
+      </div>
+   </div>
+</body>
+</html>
