@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Inexor Coopedit GUI</title>
+   
+   <style type="text/css">
+   body {
+      background-image:url('background.png');
+      background-position:center bottom;
+      background-repeat:no-repeat;
+      background-color:black;
+      background-attachment:fixed;
+      font-family:arial,verdana,courier;
+      color:white;
+      font-size:18px;
+      text-shadow: 1px 1px 2px black;
+   }
+   #top_bar {
+      position:absolute;
+      left:0px;
+      top:0px;
+      width:100%;
+      height:100px;
+      text-align:center;
+   }
+   #bottom_bar {
+      position:absolute;
+      left:0px;
+      top:100%;
+      width:100%;
+      height:50px;
+      margin-top:-50px;
+   }
+   .category {
+      cursor:pointer;
+      background-color:rgba(0,0,0, 0.5);
+      padding:10px;
+      margin-left:18px;
+      border-radius:0px 0px 10px 10px;
+      box-shadow: 0px 0px 4px black;
+      border: rgba(255,255,255,0.5) 1px solid;
+   }
+   .category:hover {
+      background-image:linear-gradient(rgb(152, 152, 152) 0%, rgb(159, 159, 0) 100%);
+   }
+
+   .window {
+      display:none;
+      position:absolute;
+      left:50%;
+      top:50%;
+      width:80%;
+      height:80%;
+      margin-left:-40%;
+      margin-top:-20%;
+      background-color:rgba(0,0,0, 0.7);
+      border-radius:10px;
+      box-shadow: 0px 0px 10px 1px black;
+      border:rgba(255,255,255,0.5) 1px solid;
+   }
+
+   #info {
+      position:absolute;
+      left:0px;
+      top:100%;
+      height:100px;
+      width:350px;
+      margin-top:-100px;
+      background-color:rgba(0,0,0,0.3);
+      font-size:14px;
+   }
+
+   .icons {
+
+   }
+   .padding {
+      padding:10px;
+   }
+   </style>
+</head>
+<body>
+   <div id="top_bar">
+      <span class="category">textures</span>
+      <span class="category">blendmapping</span>
+      <span class="category">materials</span>
+      <span class="category">entities</span>
+      <span class="category">mapmodels</span>
+      <span class="category">mapvars</span>
+      <span class="category">configuration</span>
+      <span class="category">lightning</span>
+      <span class="category">sounds</span>
+      <span class="category">scripting</span>
+      <span class="category">debugging</span>
+      <span class="category">templates</span>
+      <span class="category">save/export</span>
+      <span class="category">settings</span>
+   </div>
+   <div class="window">
+   </div>
+   <div id="bottom_bar">
+      <div id="info">
+         <div class="padding">
+            texture: ID 1 "texture/a_teamate/gold_floor.jpg"<br>
+            cube 1/8<br>
+            <table>
+               <tr>
+                  <td>wtr:0k(100%)</td>
+                  <td>wvt:0k(100%)</td>
+                  <td>evt:0k</td>
+                  <td>eva:0k</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>wtr:0k(100%)</td>
+                  <td>wvt:0k(100%)</td>
+                  <td>va:8</td>
+                  <td>gl:21(3)</td>
+                  <td>pvs:0</td>
+               </tr>
+            </table>
+         </div>
+      </div>
+   </div>
+</body>
+</html>
