@@ -1,0 +1,63 @@
+@import "fonts"
+
+html
+  font-size 62.5%
+
+body
+  color #ddd
+  cursor default
+  font-family "Titillium Web Regular"
+  background-image url("../media/background.jpg")
+
+.container
+  margin-top 25vh
+  margin-left 25vw
+  width 50vw
+  background-color rgba(#222 .8)
+  border .1rem solid #888
+  padding 2rem
+
+h2
+  text-align center
+  font-size 2.5rem
+
+h4
+  text-transform uppercase
+  font-size 2rem
+
+p,
+li,
+label,
+select
+  font-size 1.75rem
+
+label
+  margin-right 4rem
+
+label input
+  display none // Hide browser checkbox
+
+label span // Style our own checkbox
+  display inline-block
+  height 1.8rem
+  width 1.8rem
+  margin-right 1rem
+  background-color #555
+  transition .15s background-color
+
+[type="checkbox"]:checked + span
+  background-color #f2f2f2
+  transition .15s background-color
+
+select
+  margin 0
+  width 16rem
+  color #ddd
+  background #222
+  font-size 1.5rem
+  padding .4rem 2rem .4rem .4rem
+  border .1rem solid #ccc
+  height 3.2rem
+  -webkit-appearance none
+     -moz-appearance none
+          appearance none
