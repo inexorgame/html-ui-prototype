@@ -6,7 +6,6 @@
 
 <style type="text/css">
 body {
-   /* temporary background image provider to improve visual appearance of this suggestion */
    background-image:url('http://www.gstf-clan.de/downloads/background4.png');
    font-family: arial, verdana, courier;
    color:white;
@@ -21,32 +20,22 @@ body {
 	height:230px;
 	margin-top: -90px;
 	padding:5px;
-	background:transparent radial-gradient(circle at center 120px , rgba(28, 107, 107, 0.26) 0%, rgb(0, 0, 0) 100%) repeat scroll 0% 0%;
-	/* border-top-right-radius:20px;
-	border-bottom-right-radius:20px; */
+	background-color:rgba(0,0,0,0.7);
 }
-
-/* We should probably not call this options (?) */
 .vote_options {
 	margin:15px;
 	text-align:left;
-	/* color:rgb(255, 64, 64); */
 }
-
 .number_box {
-	/* border: 1px solid white; */
-	width:10px;
+	width:20px;
 	height:10px;
 	margin-right:10px;
-	color:gray;
 }
-
 code {
 	font-size:22px;
 	margin-right:5px;
 	text-shadow:2px 2px 2px black;
 }
-
 </style>
 
 </head>
@@ -54,10 +43,11 @@ code {
    <div id="vote_box">
       Would you like to change the current map to <b>reissen</b>?
       <div class="vote_options">
-         <span class="number_box">3</span><code>F1</code>yes<br>
-         <span class="number_box">4</span><code>F2</code>no<br>
-         <span class="number_box">1</span><code>F3</code>why not both?<br></span>
-         <span class="number_box">7</span><code>F4</code>why not duomo?<br>
+         <span class="number_box">0</span><code>F1</code>yes<br>
+         <span class="number_box">8</span><code>F2</code>no<br>
+         <span class="number_box">2</span><code>F3</code>why not both?<br></span>
+         <span class="number_box">0</span><code>F4</code>why not duomo?<br>
+         <span class="selected_entry"><span class="number_box">0</span><code>F5</code>I don't know<br></span>
       </div>
       <i>press a key to vote</i><br>
       vote called by: nothing

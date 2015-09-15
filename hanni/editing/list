@@ -1,0 +1,42 @@
+ fps
+      entselsnap
+      entediting
+      wireframe
+      outline
+      worldsize
+      floatspeed
+      texture
+      undo / redo
+      redo
+      show material volumes
+      texture scroll (vslot)
+      vscroll
+      vcolor
+
+      worldsize
+      gridsize
+
+      materials?
+
+      fullbright
+
+      calclight
+
+      mapmodels
+
+      entities
+
+      information (whatever)
+
+      calclight
+      remip
+
+      copy / paste
+
+      prefebs/templates
+
+      find
+
+      savemap
+
+      waypoints

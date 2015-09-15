@@ -13,6 +13,7 @@ body {
 	font-family:arial,verdana,courier;
 	color:white;
 	text-shadow: 0px 1px 1px black;
+  line-height:23px;
 }
 #keyboard_layout {
 	position:absolute;
@@ -28,13 +29,12 @@ body {
 	border:black 1px solid;
 }
 select {
-	color:white;
+	color:black;
 	width:260px;
-	height:30px;
+	height:20px;
 	font-family:arial;
 	border:rgba(255,255,255, 0.5) 1px solid;
-	text-shadow: 0px 1px 1px black;
-	background-color:transparent;
+	background-color:white;
 	font-size:16px;
 }
 
@@ -70,7 +70,7 @@ select {
   box-shadow:1px 1px 2px 1px rgba(0, 0, 0, 0.56);
 	width:40px;
 	height:40px;
-	font-size:14px;
+	font-size:18px;
 	font-family:courier;
 	text-align:center;
 	cursor:pointer;
@@ -94,22 +94,32 @@ big {
 <body>
    <div id="keyboard_layout">
       <div style="margin:10px;">
-         Edit keyboard layout for:
+         Customize your keyboard layout: Click on a key to show/edit your key bindings.<br>
+         Filters: mode:
          <select>
-            <option>gameplay (all game modes)</option>
-            <option>dead (waiting for respawn)</option>
+            <option>insta CTF</option>
+            <option>efficiency</option>
+            <option>dead (waiting for spawn)</option>
             <option>spectator</option>
             <option>intermission</option>
-            <option>coop editing</option>
+            <option>coopedit</option>
             <option>main menu</option>
         </select>
+        situation:
+         <select>
+            <option>playing</option>
+            <option>spectator</option>
+            <option>spectator (following)</option>
+            <option>intermission</option>
+            <option>editing</option>
+            <option>mainmenu</option>
+        </select>
         <br>
-        This theoretical keyboard layout may differs from your actual keyboard shape.
-        
+        This theoretical keyboard design may differs from you actual keyboard.
         <div id="key_block">
 
            <!-- Escape button -->
-           <div class="key" style="left:0px; top:0px;">Esc</div>
+           <div class="key" style="left:0px; top:0px;">ESC</div>
            <!--  F1-F4  -->
            <div class="key" style="left:80px; top:0px;">F1</div>
            <div class="key" style="left:130px; top:0px;">F2</div>
@@ -143,6 +153,7 @@ big {
            <div class="key" style="left:600px; top:70px;">`</div>
            <!-- back key -->
            <div class="key" style="left:650px; top:70px; width:100px;"><big>←</big></div>
+           <div class="key" style="left:690px; top:120px; width:55px; height:90px;"><big>&#8617;</big></div>
 
 
 
@@ -195,8 +206,8 @@ big {
 
            <div class="key" style="left:0px; top:270px; width:50px;">CTRL</div>
            <div class="key" style="left:60px; top:270px; width:50px;">WIN</div>
-           <div class="key" style="left:120px; top:270px;">Alt</div>
-           <div class="key" style="left:170px; top:270px; width:340px;">Space</div>
+           <div class="key" style="left:120px; top:270px;">ALT</div>
+           <div class="key" style="left:170px; top:270px; width:340px;"></div>
            <div class="key" style="left:520px; top:270px;">Alt</div>
            <div class="key" style="left:570px; top:270px;">CTX</div>
            <div class="key" style="left:620px; top:270px; width:120px;">CTRL</div>
@@ -206,17 +217,17 @@ big {
 
         <!-- system keys -->
         <div id="system_navigation_block">
-           <div class="key" style="left:40px; top:0px;">PRIN</div>
-           <div class="key" style="left:90px; top:0px;">SCRO</div>
-           <div class="key" style="left:140px; top:0px;">PAUS</div>
+           <div class="key" style="left:40px; top:0px;">PRI</div>
+           <div class="key" style="left:90px; top:0px;">SCR</div>
+           <div class="key" style="left:140px; top:0px;">PAU</div>
 
-           <div class="key" style="left:40px; top:70px;">INSE</div>
-           <div class="key" style="left:90px; top:70px;">HOME</div>
+           <div class="key" style="left:40px; top:70px;">INS</div>
+           <div class="key" style="left:90px; top:70px;">HMW</div>
            <div class="key" style="left:140px; top:70px;">UP</div>
 
            <div class="key" style="left:40px; top:120px;">DEL</div>
            <div class="key" style="left:90px; top:120px;">END</div>
-           <div class="key" style="left:140px; top:120px;">DOWN</div>
+           <div class="key" style="left:140px; top:120px;">DWN</div>
 
 
            <div class="key" style="left:40px; top:270px;">&larr;</div>
@@ -226,7 +237,7 @@ big {
         </div>
 
         <div id="num_block">
-           <div class="key" style="left:10px; top:70px;">Num</div>
+           <div class="key" style="left:10px; top:70px;">NUM</div>
            <div class="key" style="left:60px; top:70px;">/</div>
            <div class="key" style="left:110px; top:70px;">*</div>
            <div class="key" style="left:160px; top:70px;">-</div>
@@ -245,13 +256,12 @@ big {
            <div class="key" style="left:60px; top:220px;">2</div>
            <div class="key" style="left:110px; top:220px;">3</div>
 
-           <div class="key" style="left:160px; top:220px; height:90px;">Enter</div>
+           <div class="key" style="left:160px; top:220px; height:90px;"><br>ENT</div>
 
            <div class="key" style="left:10px; top:270px; width:90px;">0</div>
            <div class="key" style="left:110px; top:270px;">Del</div>
 
         </div>
-
       </div>
    </div>
 </body>
