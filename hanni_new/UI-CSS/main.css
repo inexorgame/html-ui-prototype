@@ -1,0 +1,94 @@
+body {
+   background-image:url('../UI-DATA/mainmenu_background.png');
+   font-size:30px;
+   color:white;
+   font-family:cabin, arial, verdana;
+   /* do not make text selectable */
+   -webkit-user-select: none; /* Chrome/Safari */        
+   -moz-user-select: none; /* Firefox */
+   -ms-user-select: none; /* IE10+ */
+}
+
+#inexor_logo {
+   position:absolute;
+   left:50%;
+   top:20%;
+   margin-left:-300px;
+   margin-top:-82px;
+}
+
+#inexor_main_menu {
+   width:1000px;
+   height:500px;
+   position:absolute;
+   margin-left:-500px;
+   margin-top:-250px;
+   left:50%;
+   top:60%;
+   background-color:rgba(0,0,0,0.5);
+}
+
+.inexor_main_menu_text {
+   margin:4px;
+   word-spacing:10px;
+   letter-spacing:4px;
+   line-height:40px;
+   text-shadow:1px 1px 2px black;
+   padding:10px;
+}
+
+.inexor_main_menu_line {
+   cursor:pointer;
+   margin:4px;
+   word-spacing:10px;
+   letter-spacing:4px;
+   line-height:40px;
+   text-shadow:1px 1px 2px black;
+   padding:10px;
+}
+.inexor_main_menu_line:hover {
+   background-color:rgba(255,255,255,0.2);
+}
+
+#inexor_menu_left {
+   position:absolute;
+   left:0px;
+   top:0px;
+   margin:20px;
+   width:300px;
+}
+
+#inexor_menu_middle {
+   position:absolute;
+   margin:20px;
+   left: 300px;
+   top:0px;
+   width:300px;
+}
+
+.inexor_input_field {
+   line-height:40px;
+   font-size:20px;
+   color:white;
+   width:250px;
+   font-family:cabin, arial, verdana;
+   background-color:rgba(255,255,255, 0.2);
+   border:rgba(255,255,255,0.5) 1px solid;
+   height:25px;
+}
+
+#inexor_menu_right {
+   position:absolute;
+   margin:20px;
+   left: 600px;
+   top:0px;
+   width:300px;
+}
+
+.news {
+   margin:4px;
+   line-height:10px;
+   font-size:14px;
+   text-shadow:1px 1px 2px black;
+   padding:10px;
+}
