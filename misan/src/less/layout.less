@@ -1,0 +1,91 @@
+/* ========================================
+LAYOUT
+* The Layout contains a set of configurations
+* Other than assigning classes to your markup, you assign your style to your html.
+* should contain very basic theming
+======================================== */
+
+/*  ========================================
+    SURROUNDINGS (header, footer, no content)
+    ======================================== */
+.logo
+{
+    width: 8em;
+}
+
+main
+{
+    background: @color-light;
+    .striped();
+}
+
+body
+{
+    padding-top: 5em;
+    > header
+    {
+        .stripe(small, @indent-primary, @color-light);
+        .shadow();
+        position: fixed;
+        top: 0;
+        z-index: @z-index-header;
+    }
+    > footer
+    {
+        .stripe(large, @indent-primary, @color-secondary-dark);
+        text-transform: uppercase;
+        color: lighten(@color-secondary-dark, 40%);
+        a
+        {
+            color: lighten(@color-secondary-dark, 40%);
+        }
+        .meta
+        {
+            margin-top: 5em;
+            font-size: .75em;
+            a
+            {
+                font-family: DINWeb-Medium;
+            }
+        }
+    }
+}
+
+/*  ========================================
+    CONTENT
+    ======================================== */
+
+
+/*  ========================================
+    FORMS
+    ======================================== */
+
+
+/*  ========================================
+    COMPONENTS that are not componified
+    ======================================== */
+
+ul.breadcrumbs
+{
+    padding: 0;
+    margin: 0;
+    display: flex;
+
+    li
+    {
+        margin: 0;
+        list-style: none;
+        max-width: 20em;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        &:not(:last-child):after {
+            content: ">";
+            padding: 0 .25em;
+        }
+    }
+}
+
+a.button {
+    .button(@color-primary-dark, full);
+}

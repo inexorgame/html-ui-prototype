@@ -1,0 +1,46 @@
+/*  ========================================
+    COLORS
+    ======================================== */
+
+@color-primary: #F3786A;
+@color-secondary: #A3786A;
+
+@color-dark: tint(@color-primary, 0%);
+@color-light: average(@color-primary, hsl(0, 0, 98%));
+@color-dark-shadow: fadeout(@color-dark, 50%);
+@color-light-shadow: fadeout(@color-light, 50%);
+
+
+/*  ========================================
+    FONTS
+    ======================================== */
+
+@font-light: arial;
+@font-medium: arial;
+@font-bold: arial;
+@font-replacement: sans serif;
+
+/*  ========================================
+    BREAKPOINTS
+    ======================================== */
+
+@breakpoint-xs: 320px;
+@breakpoint-sm: 600px;
+@breakpoint-md: 960px;
+@breakpoint-lg: 1200px;
+
+/*  ========================================
+    Z-INDEXES
+    ======================================== */
+
+@z-index-overlay: 2000;
+@z-index-searchbar: 3000;
+@z-index-header: 4000;
+@z-index-modal: 5000;
+
+/*  ========================================
+    DURATIONS
+    ======================================== */
+
+@duration-hover: .1s;
+@duration-action: .33s;

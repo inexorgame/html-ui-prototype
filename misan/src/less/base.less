@@ -1,0 +1,189 @@
+/* ========================================
+BASE
+* Contains HTML default elements (b,i,u,table...)
+* Does not contain classes, ids
+* Can implement mixins
+======================================== */
+
+*
+{
+    box-sizing: border-box;
+}
+
+/*  ========================================
+    BLOCK ELEMENTS
+    ======================================== */
+
+body, html
+{
+    background-color: @color-secondary-dark;
+    overflow-x: hidden;
+    min-width: 320px;
+    font-family: @font-light;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 1.5em; // 24px / 150%
+    color: @color-secondary-dark;
+    margin: 0;
+    padding: 0;
+}
+
+aside > div
+{
+    .card(fadeout(@color-dark-shadow, 45%), small);
+    margin: 0 0 2em 0;
+}
+
+table {
+    margin: 1em 0 @indent-large 0;
+    border-spacing: 0;
+    width: 100%;
+
+    thead {
+        background: darken(@color-light, 5%);
+    }
+
+    th {
+        font-family: @font-medium, sans-serif;
+        font-weight: normal;
+        text-align: left;
+        background: darken(@color-light, 5%);
+        vertical-align: top;
+    }
+
+    tr {
+        th,
+        td {
+            vertical-align: top;
+            padding: .75em .75em .25em .5em;
+            border-bottom: 1px solid darken(@color-light, 10%);
+        }
+    }
+}
+
+
+/*  ========================================
+    TEXTUAL/CONTENT ELEMENTS
+    ======================================== */
+
+hr
+{
+    margin: 1em 0;
+    border: none;
+    width: 100%;
+    height: .1rem;
+    background-color: lighten(@color-dark, 50%);
+}
+
+p
+{
+    padding: 0;
+    margin: 1em 0;
+    line-height: 1.5em;
+    word-wrap: break-word;
+    &:first-child {
+        margin-top: 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+a
+{
+    position: relative;
+    transition: all @duration-action ease;
+    color: @color-secondary;
+    text-decoration: none;
+    cursor: pointer;
+    outline: 0;
+    &:hover {
+        color: @color-secondary;
+    }
+
+    img
+    {
+        border: none;
+        outline: none;
+    }
+
+    p,
+    span
+    {
+        cursor: pointer;
+    }
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+}
+
+ul
+{
+    list-style: square;
+}
+
+ul,ol
+{
+    padding: 0 0 0 1em;
+    margin-bottom: 0;
+}
+
+ol
+{
+    list-style-type: decimal;
+    ol {
+        list-style-type: lower-alpha;
+    }
+}
+
+h1, h2, h3, h4, h5, h6
+{
+    margin: 0;
+    margin: 1em 0;
+    line-height: 1.25em;
+    text-transform: uppercase;
+    font-family: @font-light;
+    font-weight: 400;
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+b, strong {
+    font-weight: normal;
+    font-family: @font-medium, sans-serif;
+}
+
+h1 {
+    color: @color-secondary;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3, h3 a {
+    font-size: 1.15em;
+    color: @color-secondary-dark;
+}
+
+h4 {
+    font-size: 1rem;
+    font-family: @font-medium, sans-serif;
+    color: @color-secondary-dark;
+}
+
+/*  ========================================
+    FORM ELEMENTS
+    ======================================== */
+
+fieldset
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
