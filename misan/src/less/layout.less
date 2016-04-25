@@ -8,48 +8,7 @@ LAYOUT
 /*  ========================================
     SURROUNDINGS (header, footer, no content)
     ======================================== */
-.logo
-{
-    width: 8em;
-}
 
-main
-{
-    background: @color-light;
-    .striped();
-}
-
-body
-{
-    padding-top: 5em;
-    > header
-    {
-        .stripe(small, @indent-primary, @color-light);
-        .shadow();
-        position: fixed;
-        top: 0;
-        z-index: @z-index-header;
-    }
-    > footer
-    {
-        .stripe(large, @indent-primary, @color-secondary-dark);
-        text-transform: uppercase;
-        color: lighten(@color-secondary-dark, 40%);
-        a
-        {
-            color: lighten(@color-secondary-dark, 40%);
-        }
-        .meta
-        {
-            margin-top: 5em;
-            font-size: .75em;
-            a
-            {
-                font-family: DINWeb-Medium;
-            }
-        }
-    }
-}
 
 /*  ========================================
     CONTENT
@@ -87,5 +46,5 @@ ul.breadcrumbs
 }
 
 a.button {
-    .button(@color-primary-dark, full);
+    .button(@color-primary, full);
 }

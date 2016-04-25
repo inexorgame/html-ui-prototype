@@ -7,7 +7,7 @@ BUTTON COMPONENT
 * @color: color
 ======================================== */
 
-.button(@color: @color-primary-dark, @type: outline) {
+.button(@color: @color-primary, @type: outline) {
     display: inline-block;
     user-select: none;
     width: auto;
@@ -51,9 +51,9 @@ BUTTON COMPONENT
 
 .button {
     &.outline {
-        .button(@color-primary-dark, @type: outline);
+        .button(@color-primary, @type: outline);
     }
     &.reverse {
-        .button(@color-primary-dark, @type: outline-reverse);
+        .button(@color-primary, @type: outline-reverse);
     }
 }

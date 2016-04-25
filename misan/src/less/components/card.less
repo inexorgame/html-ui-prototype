@@ -10,7 +10,7 @@ CARD COMPONENT
 * @type
 ======================================== */
 
-.card(@color: @color-primary-dark, @size: small, @action: false, @action-color: lighten(@color, 10%)) {
+.card(@color: @color-primary, @size: small, @action: false, @action-color: lighten(@color, 10%)) {
     background-color: @color;
     & when (@action = true) {
         transition: all @duration-action ease;

@@ -16,26 +16,20 @@ BASE
 
 body, html
 {
-    background-color: @color-secondary-dark;
+    background-color: @color-light;
     overflow-x: hidden;
     min-width: 320px;
     font-family: @font-light;
     font-weight: normal;
     font-size: 16px;
     line-height: 1.5em; // 24px / 150%
-    color: @color-secondary-dark;
+    color: @color-dark;
     margin: 0;
     padding: 0;
 }
 
-aside > div
-{
-    .card(fadeout(@color-dark-shadow, 45%), small);
-    margin: 0 0 2em 0;
-}
-
 table {
-    margin: 1em 0 @indent-large 0;
+    margin: 1em 0 2em 0;
     border-spacing: 0;
     width: 100%;
 
@@ -168,13 +162,13 @@ h2 {
 
 h3, h3 a {
     font-size: 1.15em;
-    color: @color-secondary-dark;
+    color: @color-secondary;
 }
 
 h4 {
     font-size: 1rem;
     font-family: @font-medium, sans-serif;
-    color: @color-secondary-dark;
+    color: @color-secondary;
 }
 
 /*  ========================================
