@@ -11,14 +11,14 @@ BUTTON COMPONENT
     display: inline-block;
     user-select: none;
     width: auto;
-    padding: 1em 1.1em .9em;
     margin-top: 1em;
     border-radius: .1em;
     font-size: 1em;
-    line-height: .8em;
+    cursor: pointer;
+    line-height: 1;
     text-transform: uppercase;
     transition: all @duration-action ease;
-    font-family: DINWeb;
+    font-family: @font-medium;
     & when (@type = outline) {
         background-color: transparent;
         color: @color-light;
