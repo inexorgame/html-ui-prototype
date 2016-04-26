@@ -7,6 +7,7 @@ LAYOUT
 
 * {
     box-sizing: border-box;
+    transition: all @duration-action ease;
 }
 
 .background-video {
@@ -30,15 +31,22 @@ app {
 
 nav {
     height: 100%;
+    padding: 1em;
     background: @color-dark-shadow;
     ul {
 
         height: 100%;
         li {
-            width: 100%;
-            padding: 1em 2em;
+            .button(@color-primary, full);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: .5em;
+            margin: 1em 0;
             &:hover {
-                border: 1px solid red;
+                .fa {
+                    transform: scale(1.5);
+                }
             }
         }
     }
