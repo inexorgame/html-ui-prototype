@@ -5,24 +5,51 @@ LAYOUT
 * should contain very basic theming
 ======================================== */
 
-/*  ========================================
-    SURROUNDINGS (header, footer, no content)
-    ======================================== */
+* {
+    box-sizing: border-box;
+}
 
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: @z-index-background;
+    pointer-events: none;
+    -webkit-filter: blur(.5em);
 
-/*  ========================================
-    CONTENT
-    ======================================== */
+}
 
+app {
+    display: block;
+    height: 100%;
+    width: 100%;
+}
 
-/*  ========================================
-    FORMS
-    ======================================== */
+nav {
+    height: 100%;
+    background: @color-dark-shadow;
+    ul {
 
+        height: 100%;
+        li {
+            width: 100%;
+            padding: 1em 2em;
+            &:hover {
+                border: 1px solid red;
+            }
+        }
+    }
+}
 
-/*  ========================================
-    COMPONENTS that are not componified
-    ======================================== */
+main {
+    width: 100%;
+    height: 100%;
+    z-index: @z-index-overlay;
+    position: relative;
+}
 
 ul.breadcrumbs
 {
