@@ -38,6 +38,10 @@ module.exports = {
                 {
                     from: 'assets/**',
                     context: './src/'
+                },
+                {
+                    from: 'index.html',
+                    context: './src/'
                 }
             ]
         ),
