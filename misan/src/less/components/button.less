@@ -42,8 +42,11 @@ BUTTON COMPONENT
         color: contrast(@color, @color-dark, @color-light);
 
         &:hover {
+            box-sizing: border-box;
             @color-hover: lighten(@color, 10%);
-            background-color: @color-hover;
+            animation-name: lsd-background;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
             color: contrast(@color-hover, @color-dark, @color-light);
         }
     }

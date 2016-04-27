@@ -46,6 +46,8 @@ nav {
             &:hover {
                 .fa {
                     transform: scale(1.5);
+                    animation: 1s scale-pulse infinite;
+                    animation-direction: alternate;
                 }
             }
         }
@@ -66,19 +68,11 @@ h1 {
     background: red;
 
     color: @color-light;
-    animation: pulse 10s infinite;
+    animation: lsd-background 10s infinite;
     padding: 2em 4em;
     height: 5em;
-    margin: 1.5em 15%;
+    margin: 1.5em 0 2em 15%;
     width: 100%;
-}
-
-@keyframes pulse {
-    0% { background: hsl(20, 50%, 50%); }
-    25% { background: hsl(110, 50%, 50%); }
-    50% { background: hsl(200, 50%, 50%); }
-    75% { background: hsl(290, 50%, 50%); }
-    100% { background: hsl(20, 50%, 50%); }
 }
 
 section.ui {
