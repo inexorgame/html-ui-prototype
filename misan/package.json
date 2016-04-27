@@ -23,12 +23,13 @@
     "html-webpack-plugin": "^2.16.0",
     "less": "^2.6.1",
     "less-loader": "^2.2.3",
-    "riot": "^2.3.17",
+    "riotjs-loader": "^3.0.0",
     "style-loader": "^0.13.1",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
-    "animate.css": "^3.5.1"
+    "animate.css": "^3.5.1",
+    "riot": "^2.3.18"
   }
 }
