@@ -3,23 +3,80 @@
     <main layout="row">
         <nav flex="15">
             <ul layout="column">
-                <li><i class="fa fa-gamepad"></i>Player</li>
-                <li><i class="fa fa-server"></i>Server</li>
-                <li><i class="fa fa-cubes"></i>Content</li>
-                <li><i class="fa fa-trophy"></i>Game</li>
-                <li flex-end><i class="fa fa-cogs"></i>Settings</li>
+                <li onclick={select} flex-end={ item.order=='end'} each={item in items}>
+                    <i class="fa fa-{item.icon}"></i>{item.title}
+                </li>
             </ul>
         </nav>
         <section
             flex="85"
             class="ui"
             flex-offset="15">
-            <h1>Player</h1>
+            <h1>{title}</h1>
             <div>
-
+                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor necessitatibus veritatis ratione eius non ipsam suscipit, ullam iste minus architecto illo recusandae odit laboriosam, temporibus mollitia quo ipsum et sed.</div>
+                <div>Expedita temporibus cupiditate delectus ad ipsum, ipsa quasi nulla sequi veniam illum velit repellendus reiciendis possimus numquam. Aut pariatur assumenda aliquam cumque, eos, earum id molestiae vel ratione incidunt tempore.</div>
+                <div>Doloremque neque cumque mollitia, alias sed obcaecati minus nemo sequi. Nemo, qui, itaque. Id quia debitis ullam! Sapiente dolorem laudantium enim, magni quo, mollitia illo sint aspernatur similique fugit obcaecati.</div>
+                <div>Eius eaque voluptatem, accusamus ipsum! Ducimus facilis blanditiis adipisci ratione aliquid. Corporis molestiae esse qui neque, repellat cumque beatae. Nisi voluptatibus illo cupiditate veniam consectetur doloribus explicabo earum cumque fuga?</div>
+                <div>Perspiciatis provident minus quisquam, a cupiditate ad dicta natus nihil similique necessitatibus incidunt nostrum. Nisi alias dolorum esse labore recusandae, magnam, sed vitae suscipit quia facilis incidunt harum sapiente rem?</div>
+                <div>Iusto, corrupti laborum asperiores consequuntur unde dolorum aperiam alias esse modi, illo dicta perferendis, vel beatae iure quo impedit nobis vitae. Illo sit fugiat quae commodi voluptas animi, iure quisquam.</div>
+                <div>Deleniti saepe rerum sunt provident ut culpa ipsam amet quibusdam quas, accusantium laboriosam, nihil quisquam quae repellendus neque nemo natus vitae quos minus fugit, sed fugiat! Fugiat, animi corporis voluptatibus!</div>
+                <div>Enim illum a consectetur assumenda, vitae tempore. Dignissimos, iusto eos officia ipsa? Perferendis harum neque libero corporis a officiis non et veritatis accusantium ad, facere eos nulla provident deleniti dicta.</div>
+                <div>Commodi velit aperiam provident quae labore illum neque delectus ea deleniti debitis in ipsum dicta a magni necessitatibus aliquam dolorem expedita, accusantium earum fuga, quod magnam aut, eius. Obcaecati, voluptatibus.</div>
+                <div>Aliquam commodi earum doloribus fuga officiis dolor incidunt et a cumque quos dignissimos aut rerum, eligendi accusamus explicabo tempora minima, eveniet quia eius excepturi! Assumenda voluptatem harum, et quas blanditiis!</div>
+                <div>Doloremque temporibus tempore dicta aliquam harum deleniti voluptatum minus maxime nobis quibusdam facere eos reprehenderit dolore amet, aspernatur perspiciatis est eaque quas! Est quisquam voluptates necessitatibus dolor ipsam magni inventore!</div>
+                <div>Voluptate repudiandae culpa vitae ipsam inventore corporis veritatis sunt nobis minima perferendis incidunt, aspernatur sit quis minus recusandae. Omnis, suscipit necessitatibus, minus doloremque nam reiciendis excepturi facere? Eligendi, enim, illum.</div>
+                <div>Quas temporibus eaque blanditiis necessitatibus magnam quisquam repellat perferendis esse quos libero nulla, dolores vitae corporis porro impedit accusamus nihil, repellendus quia, earum minus fuga ipsam? Nisi aliquam, fuga esse.</div>
+                <div>Recusandae delectus necessitatibus dicta iure a nemo quidem, dolor facilis impedit doloribus sint quaerat distinctio odio unde, quae. Exercitationem nisi deserunt asperiores quasi sint eum magnam earum tempore incidunt repellendus.</div>
+                <div>Quidem, veniam. Suscipit a necessitatibus dolore iste magni sint ab, explicabo voluptatum illo minima facere aperiam est cum laborum exercitationem pariatur cumque, qui illum repellendus, earum fugiat rerum? Tempora, inventore.</div>
+                <div>Alias, deserunt, excepturi aliquid aperiam amet ad. Numquam voluptate, tenetur perferendis placeat sunt repellendus, accusantium provident incidunt possimus rerum, assumenda ullam eligendi. Omnis repellat nihil, molestias nemo iusto laborum natus!</div>
+                <div>Optio, eaque. Ad veritatis, amet a earum aliquid fuga, cumque debitis labore delectus, consectetur eum itaque ut nam blanditiis accusantium totam incidunt quae recusandae porro facere vero ipsam sed! Unde.</div>
+                <div>Explicabo recusandae magnam laboriosam, maxime. Laudantium deleniti blanditiis est nam rem eaque odit. Dignissimos iure, laboriosam vitae obcaecati pariatur quaerat expedita omnis eos quo illo unde earum, consectetur hic aliquid!</div>
+                <div>Nesciunt possimus doloribus vero animi quam provident libero, saepe laudantium reiciendis dolorem, cumque maiores, est in sequi veritatis pariatur voluptas? Dolor ex quidem laudantium tenetur sapiente, nesciunt sunt. Consequuntur, ducimus.</div>
+                <div>Hic porro voluptatem, architecto necessitatibus, incidunt quas placeat velit cum magnam, tenetur obcaecati cumque dolorum error laborum tempore aliquid. Aliquam, harum officia! Et reiciendis perspiciatis molestiae quam quia iure alias!</div>
             </div>
         </section>
     </main>
     <script>
+
+    this.items = [
+        {
+            icon: 'gamepad',
+            title: 'Player'
+        },
+        {
+            icon: 'server',
+            title: 'Server'
+        },
+        {
+            icon: 'cubes',
+            title: 'Content'
+        },
+        {
+            icon: 'trophy',
+            title: 'Game'
+        },
+        {
+            icon: 'cogs',
+            title: 'Settings',
+            order: 'end'
+        },
+    ]
+
+    this.title = 'Player'
+
+    this.on('mount', () => {
+
+        riot.route.start(true)
+        riot.route((name) => {
+            this.title = name
+            //riot.mount(this.content, name, {view: 'full'})
+        })
+    })
+
+    select(e) {
+        console.log(e.item)
+        riot.route(e.item.item.title)
+    }
     </script>
 </app>
