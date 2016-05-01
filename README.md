@@ -15,6 +15,7 @@ Partially copied from https://pad.inexor.org/p/ui
 * May accept key input
 * Doesn't accept mouse input
 * Example: Console HUD
+
 ### Menus
 * Mouse visible
 * Accepts key input
@@ -31,28 +32,27 @@ Partially copied from https://pad.inexor.org/p/ui
 
 ### List of Menus
 
-* Main Menu
-  * Multiplayer
-    * Bot Match
-    * Server Browser
-  * Options
-    * Player Settings
-    * Name
-    * Playermodel
-  * Game Settings
+#### Main Menu
+ * Multiplayer
+   * Bot Match
+   * Server Browser
+ * Options
+   * Player Settings
+   * Name
+   * Playermodel
+ * Game Settings
+  * Keyboard Bindings
+    * In-Game-Bindings (WASD)
+    * HUD-Bindings
+    * Menu-Bindings
+    * Script-Bindings
+  * Video Settings
+  * HUD Settings
+    * X, Y, W, H
+    * Game Stats
+    * ...User Interface
 
-* Keyboard Bindings
-  * In-Game-Bindings (WASD)
-  * HUD-Bindings
-  * Menu-Bindings
-  * Script-Bindings
-* Video Settings
-* HUD Settings
-  * X, Y, W, H
-  * Game Stats
-  * ...User Interface
-
-GameHUD
+#### GameHUD
 
 * Game state (icons)
 * ammo
@@ -68,7 +68,7 @@ GameHUD
 * Wallclock
 
 
-EditHUD
+#### EditHUD
 
 * Current Texture
 * Floatspeed
