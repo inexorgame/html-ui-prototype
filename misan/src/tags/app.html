@@ -1,0 +1,94 @@
+<app>
+    <video class="background-video" src="assets/inexor.mp4" autoplay loop></video>
+    <main layout="row">
+        <nav flex="15">
+            <ul layout="column">
+                <li onclick={select} flex-end={ item.order=='end'} each={item in items}>
+                    <i class="fa fa-{item.icon}"></i>{item.title}
+                </li>
+            </ul>
+        </nav>
+        <section
+            flex="85"
+            class="ui"
+            flex-offset="15">
+            <h1>{title}</h1>
+            <div>
+                <div layout="row" layout-align="space-between">
+                    <div layout="column" class="name">
+                        <span>Misan</span>
+                        <span>mX</span>
+                    </div>
+                    <img class="avatar" src="" alt="">
+                </div>
+                <div layout="row">
+                    <div class="last server">
+                        <h5>Last maps:</h5>
+                        <div layout="row" layout-wrap>
+                            <div
+                                layout-align="center center"
+                                layout="column"
+                                class="map"
+                                each={map in maps}>
+                                {map}
+                            </div>
+                        </div>
+                    </div>
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+
+    this.items = [
+        {
+            icon: 'gamepad',
+            title: 'Player'
+        },
+        {
+            icon: 'server',
+            title: 'Server'
+        },
+        {
+            icon: 'cubes',
+            title: 'Content'
+        },
+        {
+            icon: 'trophy',
+            title: 'Game'
+        },
+        {
+            icon: 'cogs',
+            title: 'Settings',
+            order: 'end'
+        },
+    ]
+
+    this.maps = [
+        'km',
+        'xenon',
+        'tempest',
+        'igcstuff',
+        'letters',
+        'mxhq',
+        'naziraid',
+    ]
+
+    this.title = 'Player'
+
+    this.on('mount', () => {
+
+        riot.route.start(true)
+        riot.route((name) => {
+            this.title = name
+            //riot.mount(this.content, name, {view: 'full'})
+        })
+    })
+
+    select(e) {
+        console.log(e.item)
+        riot.route(e.item.item.title)
+    }
+    </script>
+</app>

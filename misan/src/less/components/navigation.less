@@ -1,0 +1,74 @@
+.navigation(@collapsable, @breakpoint: @breakpoint-sm) {
+    position: relative;
+
+    .toggle-navigation {
+        display: none;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: block;
+        @media screen and (min-width: @breakpoint) {
+            display: flex;
+        }
+    }
+    li
+    {
+        display: block;
+        a
+        {
+            display: inline-block;
+            font-family: @font-medium;
+            text-transform: uppercase;
+            color: @color-dark;
+            margin: 0 0 0 2em;
+            margin-top: 0 !important;
+            line-height: 3em;
+            &:hover {
+                color: @color-dark;
+            }
+        }
+    }
+
+    @media screen and (max-width: @breakpoint) {
+        display: block;
+        width: 100%;
+        li {
+            border-top: 1px solid fadeout(@color-dark-shadow, 35%);
+            width: 100%;
+            a
+            {
+                display: block;
+                margin-left: 0;
+                line-height: 2.5em;
+                width: 100%;
+            }
+        }
+    }
+    & when (@collapsable = true) {
+        @media screen and (max-width: @breakpoint) {
+            ul {
+                display: none;
+            }
+            &.active ul {
+                display: block;
+            }
+            .toggle-navigation {
+                display: block;
+                position: absolute;
+                right: 0;
+                font-size: 2.5em;
+                top: -1.25em;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+
+nav {
+    .navigation(true, @breakpoint-md);
+}

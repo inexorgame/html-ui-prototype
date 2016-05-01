@@ -1,0 +1,20 @@
+/* ========================================
+MIXINS
+* General Use Mixins to ease up reoccuring styles
+* No Components!
+======================================== */
+
+
+.padding-vertical(@amount: 2em) {
+    padding-top: @amount;
+    padding-bottom: @amount;
+}
+
+.padding-horizontal(@amount: 5%) {
+    padding-left: @amount;
+    padding-right: @amount;
+}
+
+.shadow(@size: .5em, @color: @color-dark-shadow) {
+    box-shadow: 0 0 @size @color;
+}
