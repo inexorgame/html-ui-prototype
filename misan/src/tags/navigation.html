@@ -1,0 +1,38 @@
+<navigation>
+    <nav>
+        <ul layout="column">
+            <li onclick={select} flex-end={ item.order=='end'} each={item in items}>
+                <i class="fa fa-{item.icon}"></i>{item.title}
+            </li>
+        </ul>
+    </nav>
+    <script>
+    this.items = [
+        {
+            icon: 'gamepad',
+            title: 'Player'
+        },
+        {
+            icon: 'server',
+            title: 'Server'
+        },
+        {
+            icon: 'cubes',
+            title: 'Content'
+        },
+        {
+            icon: 'trophy',
+            title: 'Game'
+        },
+        {
+            icon: 'cogs',
+            title: 'Settings',
+            order: 'end'
+        },
+    ]
+
+    select(e) {
+        riot.route(e.item.item.title)
+    }
+    </script>
+</navigation>
