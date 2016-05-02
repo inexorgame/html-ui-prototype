@@ -5,6 +5,19 @@ Prototypes for menus, hud etc. using the CEF (HTML, CSS, JS).
 
 [Demos are available here](https://inexor-game.github.io/ui-prototype/).
 
+## Components
+
+To have a robust component library we can work upon, we have first to settle which interactive components we need.
+
+Examples:
+* Range Slider
+* Tabs
+* Pagination/Lazy Loading
+* Code Editor (maybe)
+* Notifications
+* Select2
+
+There are more to come. We have to find that out by thinking about the existing menus
 
 ## TODO
 
