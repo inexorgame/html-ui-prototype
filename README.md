@@ -10,14 +10,18 @@ Prototypes for menus, hud etc. using the CEF (HTML, CSS, JS).
 To have a robust component library we can work upon, we have first to settle which interactive components we need.
 
 Examples:
-* Range Slider
+* [Range Slider](http://refreshless.com/nouislider/)
 * Tabs
 * Pagination/Lazy Loading
 * Code Editor (maybe)
-* Notifications
-* Select2
+* [Notifications](https://docs.atlassian.com/aui/latest/docs/flag.html)
+* [Select2](http://embed.plnkr.co/NXhazc3ZTe9rRCFB0iod/preview)
 
-There are more to come. We have to find that out by thinking about the existing menus
+More inspiration for what interactive components we need, can be found on the [Atlassian UI docs](https://docs.atlassian.com/aui/latest/docs/auiselect2.html), they have quite an amount of elements.
+
+We will build our components from scratch, having weblike UI in a Game has to be adapted to the needs of the player. Should be more fastpaced than the web we use it.
+
+There are more to come. We have to find that out by thinking about the existing menus and what elements we want to use in order to control them.
 
 ## TODO
 
