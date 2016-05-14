@@ -10,13 +10,7 @@
         <div class="last server">
             <h5>Last maps:</h5>
             <div layout="row" layout-wrap>
-                <div
-                    layout-align="center center"
-                    layout="column"
-                    class="map"
-                    each={map in maps}>
-                    {map}
-                </div>
+                <level mode="avatar" title={map} each={map in maps}></level>
             </div>
         </div>
         <img src="" alt="">
@@ -31,5 +25,8 @@
         'mxhq',
         'naziraid',
     ]
+    this.on('mount', () => {
+        console.log(this);
+    })
     </script>
 </player>

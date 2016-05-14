@@ -1,0 +1,12 @@
+<level>
+    <div layout layout-align="center center" class="level-avatar" if={mode=='avatar'}>
+        <span>{title}</span>
+    </div>
+    <div class="level-detail" if={mode=='detail'}>
+
+    </div>
+    <script>
+        this.title = this.opts.title
+        this.mode = this.opts.mode
+    </script>
+</level>
