@@ -1,0 +1,35 @@
+<player>
+    <div layout="row" layout-align="space-between">
+        <div layout="column" class="name">
+            <span>Misan</span>
+            <span>mX</span>
+        </div>
+        <img class="avatar" src="" alt="">
+    </div>
+    <div layout="row">
+        <div class="last server">
+            <h5>Last maps:</h5>
+            <div layout="row" layout-wrap>
+                <div
+                    layout-align="center center"
+                    layout="column"
+                    class="map"
+                    each={map in maps}>
+                    {map}
+                </div>
+            </div>
+        </div>
+        <img src="" alt="">
+    </div>
+    <script>
+    this.maps = [
+        'km',
+        'xenon',
+        'tempest',
+        'igcstuff',
+        'letters',
+        'mxhq',
+        'naziraid',
+    ]
+    </script>
+</player>

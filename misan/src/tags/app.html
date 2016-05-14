@@ -7,44 +7,15 @@
             class="ui"
             flex-offset="15">
             <h1>{title}</h1>
-            <div>
-                <div layout="row" layout-align="space-between">
-                    <div layout="column" class="name">
-                        <span>Misan</span>
-                        <span>mX</span>
-                    </div>
-                    <img class="avatar" src="" alt="">
-                </div>
-                <div layout="row">
-                    <div class="last server">
-                        <h5>Last maps:</h5>
-                        <div layout="row" layout-wrap>
-                            <div
-                                layout-align="center center"
-                                layout="column"
-                                class="map"
-                                each={map in maps}>
-                                {map}
-                            </div>
-                        </div>
-                    </div>
-                    <img src="" alt="">
-                </div>
-            </div>
+            <article name="content">
+
+            </article>
         </section>
     </main>
     <script>
 
 
-    this.maps = [
-        'km',
-        'xenon',
-        'tempest',
-        'igcstuff',
-        'letters',
-        'mxhq',
-        'naziraid',
-    ]
+
 
     this.title = 'Player'
 
@@ -52,9 +23,9 @@
 
         riot.route.start(true)
         riot.route((name) => {
-            this.title = name
+            this.title = name || 'player'
             this.update()
-            //riot.mount(this.content, name, {view: 'full'})
+            riot.mount(this.content, name.toLowerCase(), {view: 'full'})
         })
     })
 
