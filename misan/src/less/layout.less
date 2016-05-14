@@ -29,8 +29,28 @@ LAYOUT
     margin: 5px;
     background-color: @color-primary;
     border: 1px solid black;
-
-
+    position: relative;
+    &:hover {
+        span {
+            transform: scale(1.2);
+        }
+        video {
+            opacity: 1;
+        }
+    }
+    span {
+        position: relative;
+        z-index: 100;
+    }
+    video {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: fill;
+    }
 }
 
 app, navigation {
