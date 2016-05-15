@@ -23,17 +23,40 @@ LAYOUT
 
 }
 
-.map {
+.level-avatar {
     width: 100px;
     height: 100px;
     margin: 5px;
     background-color: @color-primary;
     border: 1px solid black;
-
-
+    position: relative;
+    cursor: pointer;
+    &:hover {
+        span {
+            font-size: 1.2em;
+            text-shadow: 1px 1px .1em @color-dark-shadow;
+        }
+        video {
+            opacity: 1;
+        }
+    }
+    span {
+        position: relative;
+        z-index: 100;
+        text-align: center;
+    }
+    video {
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        min-width: 100%;
+        min-height: 100%;
+        object-fit: fill;
+    }
 }
 
-app {
+app, navigation {
     display: block;
     height: 100%;
     width: 100%;
@@ -69,6 +92,7 @@ main {
     height: 100%;
     z-index: @z-index-overlay;
     position: relative;
+    font-family: monospace;
 }
 
 h1 {
@@ -91,9 +115,9 @@ section.ui {
     left: 0;
     height: 100%;
     width: 100%;
-    > div {
+    > article {
+        width: 800px;
         background: @color-dark-shadow;
-        width: 70%;
         height: 60%;
         margin-left: 15%;
         overflow-y: scroll;

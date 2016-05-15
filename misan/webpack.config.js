@@ -3,15 +3,18 @@ var HtmlWebpackPlugin = require('html-webpack-plugin')
 var CopyWebpackPlugin = require('copy-webpack-plugin')
 var path = require('path')
 
+const PATHS = {
+  src: path.join(__dirname, 'src'),
+  build: path.join(__dirname, 'dist'),
+}
+
 module.exports = {
     cache: true,
     entry: {
-        app: './src/index.js',
-        vendor: './src/vendor.js',
+        app: PATHS.src
     },
     output: {
-        path: './dist/',
-        publicPath: './',
+        path: PATHS.build,
         filename: 'bundle.js'
     },
     module: {
@@ -22,7 +25,7 @@ module.exports = {
                 loader: 'style!css!less'
             },
             {
-                test: /\.(jpe?g|png|gif|svg)$/i,
+                test: /\.(jpe?g|png|gif|svg|mp4)$/i,
                 loader:'file-loader'
             },
             { test: /\.html$/, include: /src/, loader: 'riotjs' },
@@ -49,7 +52,11 @@ module.exports = {
     ],
     devServer: {
         port: 8080,
-        outputPath: './dist/',
+        outputPath: PATHS.build,
+        contentBase: PATHS.build,
+        historyApiFallback: true,
+        inline: true,
+        progress: true,
     },
     devtool: "source-map"
 }

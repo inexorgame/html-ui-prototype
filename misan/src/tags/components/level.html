@@ -1,0 +1,13 @@
+<level>
+    <div layout layout-align="center center" class="level-avatar" if={mode=='avatar'}>
+        <span>{map}</span>
+        <video src="assets/inexor.mp4" autoplay loop></video>
+    </div>
+    <div class="level-detail" if={mode=='detail'}>
+
+    </div>
+    <script>
+        this.map = this.opts.map
+        this.mode = this.opts.mode
+    </script>
+</level>
