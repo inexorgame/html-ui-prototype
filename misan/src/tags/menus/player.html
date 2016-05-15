@@ -6,10 +6,39 @@
         </div>
         <img class="avatar" src="" alt="">
     </div>
+    <div layout="row" layout-align="space-between">
+        <div layout="column" layout-align="space-between center">
+            <span>Kills</span>
+            <span style="font-size: 2em">129</span>
+        </div>
+        <div layout="column" layout-align="space-between center">
+            <span>Deaths</span>
+            <span style="font-size: 2em">79</span>
+        </div>
+        <div layout="column" layout-align="space-between center">
+            <span>Efficiency</span>
+            <span style="font-size: 2em">16%</span>
+        </div>
+    </div>
+    <div layout="row" layout-align="space-between">
+        <div layout="column" layout-align="space-between center">
+            <span>Maps created</span>
+            <span style="font-size: 2em">18</span>
+        </div>
+        <div layout="column" layout-align="space-between center">
+            <span>Games played</span>
+            <span style="font-size: 2em">82</span>
+        </div>
+        <div layout="column" layout-align="space-between center">
+            <span>Servers</span>
+            <span style="font-size: 2em">13</span>
+        </div>
+    </div>
     <div layout="row">
         <div class="last server">
             <h5>Last maps:</h5>
             <div layout="row" layout-wrap>
+                <level map="+" mode="avatar"></level>
                 <level mode="avatar" map={map} each={map in maps}></level>
             </div>
         </div>
@@ -17,13 +46,13 @@
     </div>
     <script>
     this.maps = [
-        'km',
+        'arabic',
         'xenon',
         'tempest',
-        'igcstuff',
-        'letters',
-        'mxhq',
-        'naziraid',
+        'industry',
+        'tortuga',
+        'park',
+        'dune',
     ]
     this.on('mount', () => {
         console.log(this);

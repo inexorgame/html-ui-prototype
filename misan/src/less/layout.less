@@ -30,9 +30,11 @@ LAYOUT
     background-color: @color-primary;
     border: 1px solid black;
     position: relative;
+    cursor: pointer;
     &:hover {
         span {
-            transform: scale(1.2);
+            font-size: 1.2em;
+            text-shadow: 1px 1px .1em @color-dark-shadow;
         }
         video {
             opacity: 1;
@@ -41,6 +43,7 @@ LAYOUT
     span {
         position: relative;
         z-index: 100;
+        text-align: center;
     }
     video {
         position: absolute;
@@ -89,6 +92,7 @@ main {
     height: 100%;
     z-index: @z-index-overlay;
     position: relative;
+    font-family: monospace;
 }
 
 h1 {
