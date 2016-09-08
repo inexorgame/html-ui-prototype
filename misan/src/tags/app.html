@@ -1,0 +1,33 @@
+<app>
+    <video class="background-video" src="assets/inexor.mp4" autoplay loop></video>
+    <main layout="row">
+        <navigation flex="15"></navigation>
+        <section
+            flex="85"
+            class="ui"
+            flex-offset="15">
+            <h1>{title}</h1>
+            <article name="content">
+
+            </article>
+        </section>
+    </main>
+    <script>
+
+
+
+
+    this.title = 'Player'
+
+    this.on('mount', () => {
+
+        riot.route.start(true)
+        riot.route((name) => {
+            this.title = name || 'player'
+            this.update()
+            riot.mount(this.content, name.toLowerCase(), {view: 'full'})
+        })
+    })
+
+    </script>
+</app>
