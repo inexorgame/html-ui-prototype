@@ -1,5 +1,5 @@
 body {
-   background-image:url('../UI-DATA/mainmenu_background.png');
+   background-image:url('../UI-DATA/ingame_background.jpg');
    font-size:30px;
    color:white;
    font-family:cabin, arial, verdana;
@@ -25,13 +25,16 @@ body {
    margin-top:-250px;
    left:50%;
    top:60%;
-   background-color:rgba(0,0,0,0.5);
+   background-color:rgba(0, 0, 0, 0.8);
+   /*box-shadow:rgba(21, 21, 21, 0.8) 0px 0px 10px 10px;*/
+   box-shadow:rgb(0, 0, 0) 0px 0px 40px 30px inset;
+   /*border:white 1px solid;*/
 }
 
 .inexor_main_menu_text {
    margin:4px;
    word-spacing:10px;
-   letter-spacing:4px;
+   letter-spacing:2px;
    line-height:40px;
    text-shadow:1px 1px 2px black;
    padding:10px;
@@ -41,7 +44,7 @@ body {
    cursor:pointer;
    margin:4px;
    word-spacing:10px;
-   letter-spacing:4px;
+   letter-spacing:2px;
    line-height:40px;
    text-shadow:1px 1px 2px black;
    padding:10px;
@@ -71,7 +74,7 @@ body {
    font-size:20px;
    color:white;
    width:250px;
-   font-family:cabin, arial, verdana;
+   font-family:cabin, verdana;
    background-color:rgba(255,255,255, 0.2);
    border:rgba(255,255,255,0.5) 1px solid;
    height:25px;
