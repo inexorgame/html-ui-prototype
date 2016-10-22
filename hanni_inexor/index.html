@@ -1,0 +1,86 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Inexor UI</title>
+      <link rel="stylesheet" href="css/foundation.css">
+      <link rel="stylesheet" href="css/app.css">
+   </head>
+<body>
+
+   <div id="inexor_logo">
+      <img src="images/logo/logo_new.png" alt="error: Logo image not found!">
+   </div>
+
+   <div id="inexor_main_menu" class="inexor_centered_frame">
+      <div id="inexor_main_menu_button_area">
+         <div class="inexor_button">Multiplayer</div>
+         <div class="inexor_button">Load map</div>
+         <div class="inexor_button">Host game</div>
+         <div class="inexor_button">Inexor blog</div>
+         <div class="inexor_button" id="options_button">Options</div>
+         <div class="inexor_button" id="about_button">About</div>
+         <div class="inexor_button" id="quit_button">Quit</div>
+      </div>
+   </div>
+
+   <div class="row" id="inexor_options_window" class="inexor_centered_frame">
+      <div class="large-12 columns">
+         <ul class="tabs" data-tabs id="example-tabs">
+            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Main Menu</a></li>
+            <li class="tabs-title"><a href="#panel2">Options</a></li>
+         </ul>
+         <div class="tabs-content" data-tabs-content="example-tabs">
+            <div class="tabs-panel is-active" id="panel1">
+            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
+            </div>
+            <div class="tabs-panel" id="panel2">
+            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="inexor_about_window" class="inexor_centered_frame">
+      <div class="row" id="inexor_about_text">
+         <h2>Inexor</h2>
+         Once upon a time Inexor was developed by a headless group of passionate game developers. It was made from gamers for gamers. <br>
+         It started as a rebellion against the everlasting dictationship of stubborn men; men who disown feature requests and fear the way of progress.
+         Blablabla...
+         <br><br><br>
+         <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
+      </div>
+   </div>
+
+   <script src="js/vendor/jquery.js"></script>
+   <script src="js/vendor/what-input.js"></script>
+   <script src="js/vendor/foundation.js"></script>
+   <script src="js/app.js"></script>
+
+   <script>
+   $(document).ready(function(){
+      $("#quit_button").click(function(){
+         alert('You quit Inexor :(');
+      });
+      // Open about window
+      $("#about_button").click(function(){
+         $('#inexor_main_menu').fadeOut(300);
+         $('#inexor_main_menu').promise().done(function(){
+            // will be called when all the animations on the queue finish
+            $('#inexor_about_window').fadeIn(300);
+         });
+      });
+      // back to main menu button
+      $('.button_back_to_main_menu').click(function() {
+         $('.inexor_centered_frame').fadeOut(300);
+         $('.inexor_centered_frame').promise().done(function(){
+            // will be called when all the animations on the queue finish
+            $('#inexor_main_menu').fadeIn(300);
+         });
+      });
+   });
+   </script>
+</body>
+</html>

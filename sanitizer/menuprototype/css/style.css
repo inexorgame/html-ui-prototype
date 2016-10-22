@@ -11,6 +11,8 @@ html, body {
 }
 body {
 	overflow: scroll;
+   background-image:url('../../../hanni_new/UI-DATA/ingame_background.jpg');
+
 }
 a {
 	color: inherit;
