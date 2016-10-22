@@ -1274,12 +1274,12 @@ h6 {
     font-size: 1rem; } }
 
 a {
-  color: #2199e8;
+  /*color: #2199e8;*/
   text-decoration: none;
   line-height: inherit;
   cursor: pointer; }
-  a:hover, a:focus {
-    color: #1585cf; }
+  /*a:hover, a:focus {
+    color: #1585cf; }*/
   a img {
     border: 0; }
 
@@ -3219,8 +3219,9 @@ table {
     padding: 0.5rem 0.625rem 0.625rem;
     font-weight: bold;
     text-align: left; }
-  table tbody tr:nth-child(even) {
+  /*table tbody tr:nth-child(even) {
     background-color: #f1f1f1; }
+    */
   table tbody th,
   table tbody td {
     padding: 0.5rem 0.625rem 0.625rem; }
@@ -3284,8 +3285,8 @@ table.hover tbody tr:nth-of-type(even):hover {
   background: #2199e8; }
   .tabs.primary > li > a {
     color: #fefefe; }
-    .tabs.primary > li > a:hover, .tabs.primary > li > a:focus {
-      background: #1893e4; }
+    /*.tabs.primary > li > a:hover, .tabs.primary > li > a:focus {
+      background: #1893e4; }*/
 
 .tabs-title {
   float: left; }
@@ -3296,8 +3297,8 @@ table.hover tbody tr:nth-of-type(even):hover {
     font-size: 0.75rem; }
     .tabs-title > a:hover {
       background: #fefefe; }
-    .tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
-      background: #e6e6e6; }
+    /*.tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
+      background: #e6e6e6; }*/
 
 .tabs-content {
   background: #fefefe;

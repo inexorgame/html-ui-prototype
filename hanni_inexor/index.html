@@ -16,7 +16,7 @@
 
    <div id="inexor_main_menu" class="inexor_centered_frame">
       <div id="inexor_main_menu_button_area">
-         <div class="inexor_button">Multiplayer</div>
+         <div class="inexor_button" id="multiplayer_button">Multiplayer</div>
          <div class="inexor_button">Load map</div>
          <div class="inexor_button">Host game</div>
          <div class="inexor_button">Inexor blog</div>
@@ -26,21 +26,191 @@
       </div>
    </div>
 
-   <div class="row" id="inexor_options_window" class="inexor_centered_frame">
-      <div class="large-12 columns">
-         <ul class="tabs" data-tabs id="example-tabs">
-            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Main Menu</a></li>
-            <li class="tabs-title"><a href="#panel2">Options</a></li>
-         </ul>
-         <div class="tabs-content" data-tabs-content="example-tabs">
-            <div class="tabs-panel is-active" id="panel1">
-            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor. Suspendisse dictum feugiat nisl ut dapibus.</p>
-            </div>
-            <div class="tabs-panel" id="panel2">
-            <p>Suspendisse dictum feugiat nisl ut dapibus.  Vivamus hendrerit arcu sed erat molestie vehicula. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.  Sed auctor neque eu tellus rhoncus ut eleifend nibh porttitor.</p>
+   <div id="inexor_options_window" class="inexor_big_centered_frame">
+      <div class="row" style="margin:0px;">
+         <div class="large-12 columns" style="padding:0px;">
+            <ul class="tabs" data-tabs id="example-tabs">
+               <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Game</a></li>
+               <li class="tabs-title"><a href="#panel2">Graphics</a></li>
+               <li class="tabs-title"><a href="#panel3">Display</a></li>
+               <li class="tabs-title"><a href="#panel4">Resolution</a></li>
+               <li class="tabs-title"><a href="#panel5">Sound</a></li>
+               <li class="tabs-title"><a href="#panel6">Mouse</a></li>
+               <li class="tabs-title"><a href="#panel7">Keys</a></li>
+               <li class="tabs-title"><a href="#panel8">Console</a></li>
+            </ul>
+            <div class="tabs-content" data-tabs-content="example-tabs">
+               <div class="tabs-panel is-active" id="panel1">
+                  General game settings
+
+                  <div class="row">
+                     <div class="small-2 large-6 columns">
+                        <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">show FPS</label><br>
+                        <input id="checkbox_wall_clock" type="checkbox"><label for="checkbox_wall_clock">show clock</label>
+                        <input id="checkbox_24_hours" type="checkbox"><label for="checkbox_24_hours">24 hour</label>
+                        <input id="checkbox_clock_sec" type="checkbox"><label for="checkbox_clock_sec">seconds</label><br>
+                        <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">2D menus</label><br>
+                        <input id="checkbox_death_scoreboard" type="checkbox"><label for="checkbox_death_scoreboard">show scoreboard at death</label><br>
+                        <input id="checkbox_dmg_screen" type="checkbox"><label for="checkbox_dmg_screen">damage screen</label>
+                        <input id="checkbox_dmg_compass" type="checkbox"><label for="checkbox_dmg_compass">damage compass</label><br>
+                        <input id="checkbox_hudguns" type="checkbox"><label for="checkbox_hudguns">hudguns</label>
+                        <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">sway</label><br>
+                        <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">muzzle flash</label>
+                        <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">muzzle light</label><br>
+                        TODO!
+                    </div>
+                    <div class="small-2 large-6 columns">
+                       <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">show FPS</label>
+                    </div>
+                  </div>
+
+                  <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
+
+               </div>
+               <div class="tabs-panel" id="panel2">
+                  Such graphics much wow!
+               </div>
+               <div class="tabs-panel" id="panel3">
+                  Display settings
+               </div>
+               <div class="tabs-panel" id="panel4">
+                  Display resolution
+               </div>
+               <div class="tabs-panel" id="panel5">
+                  Sound settings
+               </div>
+               <div class="tabs-panel" id="panel6">
+                  Mouse settings
+               </div>
+               <div class="tabs-panel" id="panel7">
+                  Keyboard settings
+               </div>
+               <div class="tabs-panel" id="panel8">
+                  Console settings
+               </div>
             </div>
          </div>
       </div>
+   </div>
+
+   <div id="inexor_server_browser" class="inexor_big_centered_frame">
+      <table>
+        <thead>
+          <tr>
+             <th width="100">ping</th>
+             <th width="100">players</th>
+             <th width="100">mode</th>
+             <th width="100">map</th>
+             <th width="100">time</th>
+             <th width="100">master</th>
+             <th width="100">ip</th>
+             <th width="100">port</th>
+             <th width="600">description</th>
+          </tr>
+        </thead>
+        <tbody>
+         <tr>
+            <td>1</td>
+            <td>64/64</td>
+            <td>insta CTF</td>
+            <td>arizona</td>
+            <td>15:34</td>
+            <td>veto</td>
+            <td>192.168.2.1</td>
+            <td>31415</td>
+            <td>I like trains</td>
+         </tr>
+         <tr>
+            <td>2</td>
+            <td>63/64</td>
+            <td>insta CTF</td>
+            <td>nevada</td>
+            <td>10:01</td>
+            <td>veto</td>
+            <td>192.168.2.1</td>
+            <td>31415</td>
+            <td>I like potatoes</td>
+         </tr>
+         <tr>
+            <td>3</td>
+            <td>44/64</td>
+            <td>insta Hold</td>
+            <td>hurricane</td>
+            <td>09:00</td>
+            <td>veto</td>
+            <td>192.168.2.1</td>
+            <td>31415</td>
+            <td>Look at me I'm the server now!</td>
+         </tr>
+         <tr>
+            <td>4</td>
+            <td>33/64</td>
+            <td>Hide and Seek</td>
+            <td>desert_storm</td>
+            <td>00:59</td>
+            <td>locked</td>
+            <td>192.168.2.1</td>
+            <td>31415</td>
+            <td>IneXOR server mod 4.2.4</td>
+         </tr>
+         <tr>
+            <td>5</td>
+            <td>21/64</td>
+            <td>Race</td>
+            <td>nirvana</td>
+            <td>∞</td>
+            <td>locked</td>
+            <td>192.168.2.1</td>
+            <td>31415</td>
+            <td>IneXOR server mod 4.2.2</td>
+         </tr>
+         <tr>
+            <td>6</td>
+            <td>19/64</td>
+            <td>[custom]</td>
+            <td>getmap_1834723</td>
+            <td>∞</td>
+            <td>private</td>
+            <td>192.168.2.1</td>
+            <td>31415</td>
+            <td>IneXOR server mod 4.2.2</td>
+         </tr>
+         <tr>
+            <td>7</td>
+            <td>19/64</td>
+            <td>efficiency</td>
+            <td>[none]</td>
+            <td>∞</td>
+            <td>locked</td>
+            <td>192.168.2.1</td>
+            <td>31415</td>
+            <td>IneXOR server mod 4.2.1</td>
+         </tr>
+         <tr>
+            <td>8</td>
+            <td>19/64</td>
+            <td>coopedit</td>
+            <td>newmap</td>
+            <td>∞</td>
+            <td>locked</td>
+            <td>192.168.2.1</td>
+            <td>31415</td>
+            <td>Vanilla server</td>
+         </tr>
+         <tr>
+            <td>9</td>
+            <td>19/64</td>
+            <td>collect</td>
+            <td>bringer</td>
+            <td>02:11</td>
+            <td>password</td>
+            <td>192.168.2.1</td>
+            <td>31415</td>
+            <td>Inexor JAVA Server</td>
+         </tr>
+        </tbody>
+      </table>
+      <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
    </div>
 
    <div id="inexor_about_window" class="inexor_centered_frame">
@@ -61,25 +231,51 @@
 
    <script>
    $(document).ready(function(){
+
+      // Quit Inexor :(
       $("#quit_button").click(function(){
          alert('You quit Inexor :(');
       });
+
       // Open about window
       $("#about_button").click(function(){
-         $('#inexor_main_menu').fadeOut(300);
+         $('#inexor_main_menu, #inexor_logo').fadeOut(300);
          $('#inexor_main_menu').promise().done(function(){
             // will be called when all the animations on the queue finish
             $('#inexor_about_window').fadeIn(300);
          });
       });
-      // back to main menu button
-      $('.button_back_to_main_menu').click(function() {
-         $('.inexor_centered_frame').fadeOut(300);
-         $('.inexor_centered_frame').promise().done(function(){
+
+      // Show options
+      $("#options_button").click(function(){
+         $('#inexor_main_menu, #inexor_logo').fadeOut(300);
+         $('#inexor_main_menu').promise().done(function(){
             // will be called when all the animations on the queue finish
-            $('#inexor_main_menu').fadeIn(300);
+            $('#inexor_options_window').fadeIn(300);
          });
       });
+
+      // back to main menu button
+      $('.button_back_to_main_menu').click(function() {
+         $('.inexor_centered_frame, .inexor_big_centered_frame').fadeOut(300);
+         $('.inexor_centered_frame, .inexor_big_centered_frame').promise().done(function(){
+            // will be called when all the animations on the queue finish
+            $('#inexor_main_menu').fadeIn(300);
+            $('#inexor_logo').fadeIn(300);
+         });
+      });
+
+
+      // back to main menu button
+      $('#multiplayer_button').click(function() {
+         $('.inexor_centered_frame, #inexor_logo').fadeOut(300);
+         $('.inexor_centered_frame').promise().done(function(){
+            // will be called when all the animations on the queue finish
+            $('#inexor_server_browser').fadeIn(300);
+         });
+      });
+
+
    });
    </script>
 </body>
