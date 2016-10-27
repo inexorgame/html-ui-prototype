@@ -24,6 +24,16 @@
          <div class="inexor_button" id="about_button">About</div>
          <div class="inexor_button" id="quit_button">Quit</div>
       </div>
+      <div id="inexor_main_menu_profile">
+         <div class="inexor_text">
+            <!-- My Profile<br>
+            <img src="images/profile/profile_picture.jpeg" alt="error: could not load profile picture =("><br>
+            -->
+            <div class="inexor_button" id="profile_button">My Profile</div>
+            <div class="inexor_button" id="playermodel_button">Playmodel</div>
+            <div class="inexor_button" id="crosshair_button">Crosshair</div>
+         </div>
+      </div>
    </div>
 
    <div id="inexor_options_window" class="inexor_big_centered_frame">
@@ -41,8 +51,7 @@
             </ul>
             <div class="tabs-content" data-tabs-content="example-tabs">
                <div class="tabs-panel is-active" id="panel1">
-                  General game settings
-
+                  <h3>General game settings</h3><hr>
                   <div class="row">
                      <div class="small-2 large-6 columns">
                         <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">show FPS</label><br>
@@ -54,33 +63,172 @@
                         <input id="checkbox_dmg_screen" type="checkbox"><label for="checkbox_dmg_screen">damage screen</label>
                         <input id="checkbox_dmg_compass" type="checkbox"><label for="checkbox_dmg_compass">damage compass</label><br>
                         <input id="checkbox_hudguns" type="checkbox"><label for="checkbox_hudguns">hudguns</label>
-                        <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">sway</label><br>
-                        <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">muzzle flash</label>
-                        <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">muzzle light</label><br>
-                        TODO!
+                        <input id="checkbox_sway" type="checkbox"><label for="checkbox_sway">sway</label>
+                        <input id="checkbox_muzzle_flash" type="checkbox"><label for="checkbox_muzzle_flash">muzzle flash</label>
+                        <input id="checkbox_muzzle_light" type="checkbox"><label for="checkbox_muzzle_light">muzzle light</label><br>
+                        <input id="checkbox_blood" type="checkbox"><label for="checkbox_blood">blood</label><br>
+                        <input id="checkbox_ragdoll" type="checkbox"><label for="checkbox_ragdoll">ragdoll deaths</label>
+                        <input id="checkbox_ragdoll_respawn_keep" type="checkbox"><label for="checkbox_ragdoll_respawn_keep">keep after respawn</label><br>
+                        <input id="checkbox_hide_dead_players" type="checkbox"><label for="checkbox_hide_dead_players">hide dead players</label><br>
+                        <br>
+                        ragdoll velocity multiplier<br>
+                        <input class="inexor_slider" type="range" min="1" max="20" step="1">
+
                     </div>
                     <div class="small-2 large-6 columns">
-                       <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">show FPS</label>
+                       <input id="checkbox_fullbright" type="checkbox"><label for="checkbox_fullbright">fullbright player models</label>
+                       <br>
+                       <input type="radio" name="radio_fullbright_models" value="subtle" id="fullbright_subtle"><label for="fullbright_subtle">subtle</label>
+                       <input type="radio" name="radio_fullbright_models" value="bright" id="fullbright_bright"><label for="fullbright_bright">bright</label>
+                       <input type="radio" name="radio_fullbright_models" value="overbright" id="fullbright_overbright"><label for="fullbright_overbright">overbright</label>
+                       <input type="radio" name="radio_fullbright_models" value="max" id="fullbright_max"><label for="fullbright_max">overbright</label>
+                       <br>
+                       <input id="checkbox_matching_models" type="checkbox"><label for="checkbox_matching_models">force matching playermodels</label><br>
+                       <input id="checkbox_teamskins" type="checkbox"><label for="checkbox_teamskins">always use teamskins</label><br>
+                       <input id="checkbox_outline_capture_meters" type="checkbox"><label for="checkbox_outline_capture_meters">outline capture meters</label><br>
+                       <input id="checkbox_numbered_capture_bases" type="checkbox"><label for="checkbox_numbered_capture_bases">numbered capture meters</label><br>
+                       <input id="checkbox_show_teammates" type="checkbox"><label for="checkbox_show_teammates">show teammates</label><br>
+                       <input id="checkbox_hit_sound" type="checkbox"><label for="checkbox_hit_sound">hit sound</label><br>
+                       <input id="checkbox_crosshair_fx" type="checkbox"><label for="checkbox_crosshair_fx">crosshair color effects</label>
+                       <input id="checkbox_fx_teamates" type="checkbox"><label for="checkbox_fx_teamates">teamates</label>
+                       <input id="checkbox_fx_hits" type="checkbox"><label for="checkbox_fx_hits">hits</label>
+                       <br>
+                       <input id="checkbox_reset" type="checkbox"><label for="checkbox_reset">restore default settings</label>
                     </div>
                   </div>
-
-                  <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
-
                </div>
+
                <div class="tabs-panel" id="panel2">
-                  Such graphics much wow!
+                  <h3>Video settings</h3><hr>
+                  <div class="row">
+                     <div class="small-2 large-12 columns">
+                        <input id="checkbox_shaders" type="checkbox"><label for="checkbox_shaders">enable shaders</label>
+                        <br>
+                        water
+                        <input id="checkbox_refraction" type="checkbox"><label for="checkbox_refraction">refraction</label>
+                        <input id="checkbox_reflection" type="checkbox"><label for="checkbox_reflection">reflection</label>
+                        <input id="checkbox_caustics" type="checkbox"><label for="checkbox_caustics">caustics</label>
+                        <input id="checkbox_animation" type="checkbox"><label for="checkbox_animation">animation</label>
+                        <br>
+                        <input id="checkbox_shadowmaps" type="checkbox"><label for="checkbox_shadowmaps">shadow maps</label>
+                        <input id="checkbox_blob_shadows" type="checkbox"><label for="checkbox_blob_shadows">blob shadows</label>
+                        <br>
+                        <input id="checkbox_dynlight" type="checkbox"><label for="checkbox_dynlight">dynamic lights</label>
+                        <br>
+                        <input id="checkbox_motionblur" type="checkbox"><label for="checkbox_motionblur">motion blur</label>
+                        <br>
+                        <input id="checkbox_grass" type="checkbox"><label for="checkbox_grass">grass</label>
+                        <br>
+                        <input id="checkbox_glass_reflection" type="checkbox"><label for="checkbox_glass_reflection">glass reflection</label>
+                        <br>
+                        <input id="checkbox_decals" type="checkbox"><label for="checkbox_decals">decals</label>
+                        <input type="radio" name="radio_decal_fade" value="quick" id="fade_quick"><label for="fade_quick">quick fade</label>
+                        <input type="radio" name="radio_decal_fade" value="slow" id="fade_slow"><label for="fade_slow">slow fade</label>
+                        <br>
+                        <input id="checkbox_tjoints" type="checkbox"><label for="checkbox_tjoints">fix t-joints</label>
+                        <br>
+                        textures
+                        <input type="radio" name="radio_texture_quality" value="low_quality" id="low_tex_quality"><label for="low_tex_quality">low quality</label>
+                        <input type="radio" name="radio_texture_quality" value="medium_quality" id="medium_tex_quality"><label for="medium_tex_quality">medium quality</label>
+                        <input type="radio" name="radio_texture_quality" value="high_quality" id="high_tex_quality"><label for="high_tex_quality">high quality</label>
+                        <br>
+                        models
+                        <input id="checkbox_models_lightning" type="checkbox"><label for="checkbox_models_lightning">lightning</label>
+                        <input id="checkbox_models_reflection" type="checkbox"><label for="checkbox_models_reflection">reflection</label>
+                        <input id="checkbox_models_glow" type="checkbox"><label for="checkbox_models_glow">glow</label>
+                        <br>
+                        animations
+                        <input type="radio" name="radio_animations_quality" value="medium_quality" id="medium_anim_quality"><label for="medium_anim_quality">medium quality</label>
+                        <input type="radio" name="radio_animations_quality" value="high_quality" id="high_anim_quality"><label for="high_anim_quality">high quality</label>
+                        <br>
+                        <br>
+                    </div>
+                  </div>
                </div>
+
                <div class="tabs-panel" id="panel3">
-                  Display settings
+                  <h3>Display settings</h3><hr>
+                  <div class="row">
+                     <div class="small-2 large-12 columns">
+                        <input id="checkbox_fullscreen" type="checkbox"><label for="checkbox_fullscreen">fullscreen</label>
+                        <br>
+                        <input id="checkbox_vsync" type="checkbox"><label for="checkbox_vsync">use vertical synchronisation (v-sync)</label>
+                        <br>
+                        <br>
+                        gamma
+                        <br>
+                        <input class="inexor_slider" type="range" min="1" max="100" step="1">
+                        full-scene anti aliasing
+                        <br>
+                        <input class="inexor_slider" type="range" min="1" max="16" step="1">
+                        color depth
+                        <br>
+                        <input class="inexor_slider" type="range" min="1" max="32" step="1">
+                        z-buffer depth
+                        <br>
+                        <input class="inexor_slider" type="range" min="1" max="32" step="1">
+                        stencil bits
+                        <br>
+                        <input class="inexor_slider" type="range" min="1" max="32" step="1">
+                        anisotropic filtering
+                        <br>
+                        <input class="inexor_slider" type="range" min="1" max="16" step="1">
+                        <br>
+                        <input id="checkbox_bilinear_filtering" type="checkbox"><label for="checkbox_bilinear_filtering">bilinear filtering</label>
+                        <input id="checkbox_mipmaps" type="checkbox"><label for="checkbox_mipmaps">trilinear filtering (mipmaps)</label>
+                    </div>
+                  </div>
                </div>
+
                <div class="tabs-panel" id="panel4">
-                  Display resolution
+                  <h3>Display resolution</h3><hr>
+                  <div class="row">
+                     <div class="small-2 large-12 columns">
+                        field of view (fov)
+                        <br>
+                        <input class="inexor_slider" type="range" min="60" max="160" step="1">
+                    </div>
+                  </div>
                </div>
                <div class="tabs-panel" id="panel5">
-                  Sound settings
+                  <h3>Sound settings</h3><hr>
+                  <div class="row">
+                     <div class="small-2 large-12 columns">
+                        master volume
+                        <br>
+                        <input class="inexor_slider" type="range" min="0" max="200" step="1">
+                        music volume
+                        <br>
+                        <input class="inexor_slider" type="range" min="0" max="200" step="1">
+                        sound channels
+                        <br>
+                        <input class="inexor_slider" type="range" min="0" max="128" step="1">
+                        sound frequency
+                        <br>
+                        <input class="inexor_slider" type="range" min="0" max="44000" step="1">
+                        sound buffer length (in bytes)
+                        <br>
+                        <input class="inexor_slider" type="range" min="0" max="8192" step="1">
+                    </div>
+                  </div>
                </div>
                <div class="tabs-panel" id="panel6">
-                  Mouse settings
+                  <h3>Mouse settings</h3><hr>
+                  <div class="row">
+                     <div class="small-2 large-12 columns">
+                        <input id="checkbox_invert_mouse" type="checkbox"><label for="checkbox_invert_mouse">inver mouse</label>
+                        <br>
+                        ingame mouse sensivity
+                        <br>
+                        <input class="inexor_slider" type="range" min="60" max="160" step="1">
+                        UI mouse sensivity
+                        <br>
+                        <input class="inexor_slider" type="range" min="60" max="160" step="1">
+                        crosshair size
+                        <br>
+                        <input class="inexor_slider" type="range" min="60" max="160" step="1">
+                    </div>
+                  </div>
                </div>
                <div class="tabs-panel" id="panel7">
                   Keyboard settings
@@ -88,6 +236,8 @@
                <div class="tabs-panel" id="panel8">
                   Console settings
                </div>
+               <!-- back button -->
+               <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
             </div>
          </div>
       </div>
@@ -97,12 +247,12 @@
       <table>
         <thead>
           <tr>
-             <th width="100">ping</th>
-             <th width="100">players</th>
-             <th width="100">mode</th>
-             <th width="100">map</th>
-             <th width="100">time</th>
-             <th width="100">master</th>
+             <th width="50">ping</th>
+             <th width="50">players</th>
+             <th width="200">mode</th>
+             <th width="200">map</th>
+             <th width="50">time</th>
+             <th width="50">master</th>
              <th width="100">ip</th>
              <th width="100">port</th>
              <th width="600">description</th>
@@ -218,7 +368,8 @@
          <h2>Inexor</h2>
          Once upon a time Inexor was developed by a headless group of passionate game developers. It was made from gamers for gamers. <br>
          It started as a rebellion against the everlasting dictationship of stubborn men; men who disown feature requests and fear the way of progress.
-         Blablabla...
+         Willing to create a game that is 100% open source with 100% open source content, these brave knights fought against a code that could not be worse in
+         terms of design patterns, flexibility, maintainability and structure.
          <br><br><br>
          <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
       </div>
@@ -242,7 +393,7 @@
          $('#inexor_main_menu, #inexor_logo').fadeOut(300);
          $('#inexor_main_menu').promise().done(function(){
             // will be called when all the animations on the queue finish
-            $('#inexor_about_window').fadeIn(300);
+            $('#inexor_about_window, #inexor_logo').fadeIn(300);
          });
       });
 
