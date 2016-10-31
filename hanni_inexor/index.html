@@ -30,7 +30,7 @@
             <img src="images/profile/profile_picture.jpeg" alt="error: could not load profile picture =("><br>
             -->
             <div class="inexor_button" id="profile_button">My Profile</div>
-            <div class="inexor_button" id="playermodel_button">Playmodel</div>
+            <div class="inexor_button" id="playermodel_button">Playermodel</div>
             <div class="inexor_button" id="crosshair_button">Crosshair</div>
          </div>
       </div>
@@ -72,6 +72,8 @@
                         <input id="checkbox_hide_dead_players" type="checkbox"><label for="checkbox_hide_dead_players">hide dead players</label><br>
                         <br>
                         ragdoll velocity multiplier<br>
+                        <input class="inexor_slider" type="range" min="1" max="20" step="1">
+                        maxroll<br>
                         <input class="inexor_slider" type="range" min="1" max="20" step="1">
 
                     </div>
@@ -131,6 +133,8 @@
                         <input type="radio" name="radio_texture_quality" value="low_quality" id="low_tex_quality"><label for="low_tex_quality">low quality</label>
                         <input type="radio" name="radio_texture_quality" value="medium_quality" id="medium_tex_quality"><label for="medium_tex_quality">medium quality</label>
                         <input type="radio" name="radio_texture_quality" value="high_quality" id="high_tex_quality"><label for="high_tex_quality">high quality</label>
+
+                        <input class="inexor_slider" type="range" min="1" max="20" step="1">
                         <br>
                         models
                         <input id="checkbox_models_lightning" type="checkbox"><label for="checkbox_models_lightning">lightning</label>
@@ -216,7 +220,7 @@
                   <h3>Mouse settings</h3><hr>
                   <div class="row">
                      <div class="small-2 large-12 columns">
-                        <input id="checkbox_invert_mouse" type="checkbox"><label for="checkbox_invert_mouse">inver mouse</label>
+                        <input id="checkbox_invert_mouse" type="checkbox"><label for="checkbox_invert_mouse">invert mouse</label>
                         <br>
                         ingame mouse sensivity
                         <br>
