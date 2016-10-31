@@ -6,6 +6,24 @@ body {
    text-shadow:1px 1px 2px black;
 }
 
+@keyframes blink-animation {
+  to {
+    visibility: hidden;
+  }
+}
+
+#beta_decline {
+   position:absolute;
+   left:10px;
+   top:10px;
+   color:red;
+   word-spacing:0px;
+   width:500px;
+
+   animation: blink-animation 1s steps(3, start) infinite;
+   -webkit-animation: blink-animation 1s steps(3, start) infinite;
+}
+
 a {
    font-size:16px;
    color:white;
