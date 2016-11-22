@@ -17,9 +17,9 @@
    <div id="inexor_main_menu" class="inexor_centered_frame">
       <div id="inexor_main_menu_button_area">
          <div class="inexor_button" id="multiplayer_button">Multiplayer</div>
-         <div class="inexor_button">Load map</div>
+         <div class="inexor_button" id="loadmap_button">Load map</div>
          <div class="inexor_button">Host game</div>
-         <div class="inexor_button">Inexor blog</div>
+         <div class="inexor_button" id="devblog_button">Inexor blog</div>
          <div class="inexor_button" id="options_button">Options</div>
          <div class="inexor_button" id="about_button">About</div>
          <div class="inexor_button" id="quit_button">Quit</div>
@@ -36,12 +36,12 @@
       </div>
    </div>
 
-   <div id="beta_decline">The work on this UI is not finished yet!<br>Status: Pre-release Alpha! -Hanni</div>
+   <div id="beta_decline">The work on this UI is not finished yet!<br>Status: Pre-release Alpha! <br>You should test this with Google Chrome! <br>-Hanni</div>
 
    <div id="inexor_options_window" class="inexor_big_centered_frame">
       <div class="row" style="margin:0px;">
          <div class="large-12 columns" style="padding:0px;">
-            <ul class="tabs" data-tabs id="example-tabs">
+            <ul class="tabs" data-tabs id="example-tabs" style="margin-left:25%;">
                <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Game</a></li>
                <li class="tabs-title"><a href="#panel2">Graphics</a></li>
                <li class="tabs-title"><a href="#panel3">Display</a></li>
@@ -369,8 +369,17 @@
       <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
    </div>
 
+   <div id="inexor_dev_blog" class="inexor_big_centered_frame">
+      <h2>This is the development blog...</h2>
+      <br>
+      TODO: embedd www.inexor.org here?
+      <!-- back button -->
+      <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
+
+   </div>
+
    <div id="inexor_about_window" class="inexor_centered_frame">
-      <div class="row" id="inexor_about_text">
+      <div class="row inexor_inner_padding">
          <h2>Inexor</h2>
          Once upon a time Inexor was developed by a headless group of passionate game developers. It was made from gamers for gamers. <br>
          It started as a rebellion against the everlasting dictationship of stubborn men; men who disown feature requests and fear the way of progress.
@@ -380,6 +389,16 @@
          <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
       </div>
    </div>
+
+   <div id="inexor_loadmap" class="inexor_big_centered_frame">
+      <div class="row inexor_inner_padding">
+         <h2>Load a map</h2>
+         Select a map to load...
+         <br><br><br>
+         <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
+      </div>
+   </div>
+
 
    <script src="js/vendor/jquery.js"></script>
    <script src="js/vendor/what-input.js"></script>
@@ -396,7 +415,7 @@
 
       // Open about window
       $("#about_button").click(function(){
-         $('#inexor_main_menu, #inexor_logo').fadeOut(300);
+         $('#inexor_main_menu, #inexor_logo').fadeOut(0);
          $('#inexor_main_menu').promise().done(function(){
             // will be called when all the animations on the queue finish
             $('#inexor_about_window, #inexor_logo').fadeIn(300);
@@ -405,7 +424,7 @@
 
       // Show options
       $("#options_button").click(function(){
-         $('#inexor_main_menu, #inexor_logo').fadeOut(300);
+         $('#inexor_main_menu, #inexor_logo').fadeOut(0);
          $('#inexor_main_menu').promise().done(function(){
             // will be called when all the animations on the queue finish
             $('#inexor_options_window').fadeIn(300);
@@ -414,21 +433,39 @@
 
       // back to main menu button
       $('.button_back_to_main_menu').click(function() {
-         $('.inexor_centered_frame, .inexor_big_centered_frame').fadeOut(300);
+         $('.inexor_centered_frame, .inexor_big_centered_frame').fadeOut(0);
          $('.inexor_centered_frame, .inexor_big_centered_frame').promise().done(function(){
             // will be called when all the animations on the queue finish
-            $('#inexor_main_menu').fadeIn(300);
-            $('#inexor_logo').fadeIn(300);
+            $('#inexor_main_menu, #inexor_logo').fadeIn(300);
          });
       });
 
 
       // back to main menu button
       $('#multiplayer_button').click(function() {
-         $('.inexor_centered_frame, #inexor_logo').fadeOut(300);
+         $('.inexor_centered_frame, #inexor_logo').fadeOut(0);
          $('.inexor_centered_frame').promise().done(function(){
             // will be called when all the animations on the queue finish
             $('#inexor_server_browser').fadeIn(300);
+         });
+      });
+
+
+      // show Inexor dev blog
+      $('#devblog_button').click(function() {
+         $('.inexor_centered_frame, #inexor_logo').fadeOut(0);
+         $('.inexor_centered_frame').promise().done(function(){
+            // will be called when all the animations on the queue finish
+            $('#inexor_dev_blog').fadeIn(300);
+         });
+      });
+
+      // show Inexor dev blog
+      $('#loadmap_button').click(function() {
+         $('.inexor_centered_frame, #inexor_logo').fadeOut(0);
+         $('.inexor_centered_frame').promise().done(function(){
+            // will be called when all the animations on the queue finish
+            $('#inexor_loadmap').fadeIn(300);
          });
       });
 
