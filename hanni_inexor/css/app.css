@@ -70,7 +70,7 @@ iframe {
 }
 
 .inexor_centered_frame {
-   border:rgba(255, 255, 255, 0.6) 1px solid;
+   border:rgba(255, 255, 255, 0.2) 1px solid;
    position:absolute;
    left:50%;
    top:50%;
@@ -78,7 +78,7 @@ iframe {
    height:500px;
    margin-left:-400px;
    margin-top:-150px;
-   background:rgba(80, 80, 80, 0.8);
+   background:rgba(80, 80, 80, 0.5);
    box-shadow:0px 0px 200px 100px rgb(0, 0, 0) inset, 0px 0px 25px 4px rgb(0, 0, 0);
    /*
    background-image:url('../images/logo/logo_new.png');
@@ -88,8 +88,8 @@ iframe {
 }
 
 .inexor_big_centered_frame {
-   border-radius:5px;
-   border:rgba(255, 255, 255, 0.5) 1px solid;
+   /*border-radius:5px;*/
+   border:rgba(255, 255, 255, 0.2) 1px solid;
    position:absolute;
    left:50%;
    top:50%;
@@ -98,6 +98,7 @@ iframe {
    margin-left:-700px;
    margin-top:-400px;
    background-color:rgba(0,0,0, 0.8);
+   /*background-image:url('../images/background/inexor_bg_inverted_logo.png');*/
    box-shadow:0px 0px 200px 100px rgb(0, 0, 0) inset, 0px 0px 25px 4px rgb(0, 0, 0);
 }
 
@@ -109,7 +110,7 @@ iframe {
    word-spacing:10px;
    letter-spacing:2px;
    line-height:50px;
-   text-shadow:1px 1px 4px black;
+   /*text-shadow:1px 1px 4px black;*/
    padding:0px;
    width:200px;
    height:50px;

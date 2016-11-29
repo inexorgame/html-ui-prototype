@@ -18,7 +18,7 @@
       <div id="inexor_main_menu_button_area">
          <div class="inexor_button" id="multiplayer_button">Multiplayer</div>
          <div class="inexor_button" id="loadmap_button">Load map</div>
-         <div class="inexor_button">Host game</div>
+         <div class="inexor_button">Host server</div>
          <div class="inexor_button" id="devblog_button">Inexor blog</div>
          <div class="inexor_button" id="options_button">Options</div>
          <div class="inexor_button" id="about_button">About</div>
@@ -43,23 +43,27 @@
          <div class="large-12 columns" style="padding:0px;">
             <ul class="tabs" data-tabs id="example-tabs" style="margin-left:25%;">
                <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Game</a></li>
-               <li class="tabs-title"><a href="#panel2">Graphics</a></li>
-               <li class="tabs-title"><a href="#panel3">Display</a></li>
-               <li class="tabs-title"><a href="#panel4">Resolution</a></li>
-               <li class="tabs-title"><a href="#panel5">Sound</a></li>
-               <li class="tabs-title"><a href="#panel6">Mouse</a></li>
-               <li class="tabs-title"><a href="#panel7">Keys</a></li>
-               <li class="tabs-title"><a href="#panel8">Console</a></li>
+               <li class="tabs-title"><a href="#panel2">UI</a></li>
+               <li class="tabs-title"><a href="#panel3">HUD</a></li>
+               <li class="tabs-title"><a href="#panel4">Graphics</a></li>
+               <li class="tabs-title"><a href="#panel5">Display</a></li>
+               <li class="tabs-title"><a href="#panel6">Resolution</a></li>
+               <li class="tabs-title"><a href="#panel7">Sound</a></li>
+               <li class="tabs-title"><a href="#panel8">Mouse</a></li>
+               <li class="tabs-title"><a href="#panel9">Keys</a></li>
+               <li class="tabs-title"><a href="#panel10">Console</a></li>
             </ul>
             <div class="tabs-content" data-tabs-content="example-tabs">
+
                <div class="tabs-panel is-active" id="panel1">
                   <h3>General game settings</h3><hr>
                   <div class="row">
                      <div class="small-2 large-6 columns">
                         <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">show FPS</label><br>
                         <input id="checkbox_wall_clock" type="checkbox"><label for="checkbox_wall_clock">show clock</label>
-                        <input id="checkbox_24_hours" type="checkbox"><label for="checkbox_24_hours">24 hour</label>
+                        <input id="checkbox_24_hours" type="checkbox"><label for="checkbox_24_hours">24h format</label>
                         <input id="checkbox_clock_sec" type="checkbox"><label for="checkbox_clock_sec">seconds</label><br>
+
                         <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">2D menus</label><br>
                         <input id="checkbox_death_scoreboard" type="checkbox"><label for="checkbox_death_scoreboard">show scoreboard at death</label><br>
                         <input id="checkbox_dmg_screen" type="checkbox"><label for="checkbox_dmg_screen">damage screen</label>
@@ -103,6 +107,24 @@
                </div>
 
                <div class="tabs-panel" id="panel2">
+                  <h3>User Interface</h3><hr>
+                  <div class="row">
+                     <div class="small-2 large-12 columns">
+                        UI settings...
+                     </div>
+                  </div>
+               </div>
+
+               <div class="tabs-panel" id="panel3">
+                  <h3>Head up display (HUD)</h3><hr>
+                  <div class="row">
+                     <div class="small-2 large-12 columns">
+                        HUD settings...
+                     </div>
+                  </div>
+               </div>
+
+               <div class="tabs-panel" id="panel3">
                   <h3>Video settings</h3><hr>
                   <div class="row">
                      <div class="small-2 large-12 columns">
@@ -152,7 +174,7 @@
                   </div>
                </div>
 
-               <div class="tabs-panel" id="panel3">
+               <div class="tabs-panel" id="panel4">
                   <h3>Display settings</h3><hr>
                   <div class="row">
                      <div class="small-2 large-12 columns">
@@ -186,7 +208,7 @@
                   </div>
                </div>
 
-               <div class="tabs-panel" id="panel4">
+               <div class="tabs-panel" id="panel5">
                   <h3>Display resolution</h3><hr>
                   <div class="row">
                      <div class="small-2 large-12 columns">
@@ -196,7 +218,8 @@
                     </div>
                   </div>
                </div>
-               <div class="tabs-panel" id="panel5">
+
+               <div class="tabs-panel" id="panel6">
                   <h3>Sound settings</h3><hr>
                   <div class="row">
                      <div class="small-2 large-12 columns">
@@ -218,7 +241,8 @@
                     </div>
                   </div>
                </div>
-               <div class="tabs-panel" id="panel6">
+
+               <div class="tabs-panel" id="panel7">
                   <h3>Mouse settings</h3><hr>
                   <div class="row">
                      <div class="small-2 large-12 columns">
@@ -236,13 +260,15 @@
                     </div>
                   </div>
                </div>
-               <div class="tabs-panel" id="panel7">
+
+               <div class="tabs-panel" id="panel8">
                   <h3>Keyboard settings</h3><hr>
                </div>
-               <div class="tabs-panel" id="panel8">
+
+               <div class="tabs-panel" id="panel9">
                   <h3>Console settings</h3><hr>
                </div>
-               <!-- back button -->
+
                <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
             </div>
          </div>
@@ -381,10 +407,7 @@
    <div id="inexor_about_window" class="inexor_centered_frame">
       <div class="row inexor_inner_padding">
          <h2>Inexor</h2>
-         Once upon a time Inexor was developed by a headless group of passionate game developers. It was made from gamers for gamers. <br>
-         It started as a rebellion against the everlasting dictationship of stubborn men; men who disown feature requests and fear the way of progress.
-         Willing to create a game that is 100% open source with 100% open source content, these brave knights fought against a code that could not be worse in
-         terms of design patterns, flexibility, maintainability and structure.
+         What can I say...
          <br><br><br>
          <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
       </div>
