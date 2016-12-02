@@ -6,12 +6,6 @@ body {
    text-shadow:1px 1px 2px black;
 }
 
-@keyframes blink-animation {
-  to {
-    visibility: hidden;
-  }
-}
-
 #beta_decline {
    position:absolute;
    left:10px;
@@ -19,9 +13,6 @@ body {
    color:red;
    word-spacing:0px;
    width:500px;
-
-   animation: blink-animation 1s steps(3, start) infinite;
-   -webkit-animation: blink-animation 1s steps(3, start) infinite;
 }
 
 a {
@@ -54,7 +45,8 @@ iframe {
 #inexor_options_window,
 #inexor_server_browser,
 #inexor_dev_blog,
-#inexor_loadmap
+#inexor_loadmap,
+#inexor_hostserver
 {
    display:none; /*do not show this in the beginning*/
 }
@@ -70,7 +62,6 @@ iframe {
 }
 
 .inexor_centered_frame {
-   border:rgba(255, 255, 255, 0.2) 1px solid;
    position:absolute;
    left:50%;
    top:50%;
@@ -78,9 +69,9 @@ iframe {
    height:500px;
    margin-left:-400px;
    margin-top:-150px;
-   background:rgba(80, 80, 80, 0.5);
-   box-shadow:0px 0px 200px 100px rgb(0, 0, 0) inset, 0px 0px 25px 4px rgb(0, 0, 0);
+   background:rgba(0, 0, 0, 0.9);
    /*
+   box-shadow:0px 0px 200px 100px rgb(0, 0, 0) inset, 0px 0px 25px 4px rgb(0, 0, 0);
    background-image:url('../images/logo/logo_new.png');
    background-position:center 50px;
    background-repeat:no-repeat;
@@ -88,8 +79,9 @@ iframe {
 }
 
 .inexor_big_centered_frame {
-   /*border-radius:5px;*/
+   /*border-radius:5px;
    border:rgba(255, 255, 255, 0.2) 1px solid;
+   */
    position:absolute;
    left:50%;
    top:50%;
@@ -97,9 +89,11 @@ iframe {
    height:800px;
    margin-left:-700px;
    margin-top:-400px;
-   background-color:rgba(0,0,0, 0.8);
-   /*background-image:url('../images/background/inexor_bg_inverted_logo.png');*/
+   background:rgba(0,0,0, 0.9);
+   /*
+   background-image:url('../images/background/inexor_bg_inverted_logo.png');
    box-shadow:0px 0px 200px 100px rgb(0, 0, 0) inset, 0px 0px 25px 4px rgb(0, 0, 0);
+   */
 }
 
 .inexor_button {
@@ -124,12 +118,12 @@ iframe {
 }
 
 .inexor_button:hover {
-   background-color:rgba(255,255,255,0.5);
+   background:linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.21));
    text-shadow:1px 1px 3px black,1px 1px 3px black;
 }
 
 #inexor_main_menu_button_area {
-   margin:50px 0px 0px 20px;
+   margin:50px 0px 0px 40px;
    position:absolute;
    left:0px;
    top:0px;

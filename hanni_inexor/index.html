@@ -18,7 +18,7 @@
       <div id="inexor_main_menu_button_area">
          <div class="inexor_button" id="multiplayer_button">Multiplayer</div>
          <div class="inexor_button" id="loadmap_button">Load map</div>
-         <div class="inexor_button">Host server</div>
+         <div class="inexor_button" id="hostgame_button">Host server</div>
          <div class="inexor_button" id="devblog_button">Inexor blog</div>
          <div class="inexor_button" id="options_button">Options</div>
          <div class="inexor_button" id="about_button">About</div>
@@ -396,19 +396,19 @@
    </div>
 
    <div id="inexor_dev_blog" class="inexor_big_centered_frame">
-      <h2>This is the development blog...</h2>
-      <br>
-      TODO: embedd www.inexor.org here?
-      <!-- back button -->
-      <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
-
+      <div class="row inexor_inner_padding">
+         <h2>This is the development blog...</h2>
+         <br>
+         TODO: embedd www.inexor.org here?
+         <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
+      </div>
    </div>
 
    <div id="inexor_about_window" class="inexor_centered_frame">
       <div class="row inexor_inner_padding">
          <h2>Inexor</h2>
-         What can I say...
-         <br><br><br>
+         Inexor is an open source game that was made from gamers for gamers. This project started in 2014 as a fork of Cube2.
+         <br>
          <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
       </div>
    </div>
@@ -423,12 +423,35 @@
    </div>
 
 
+   <div id="inexor_hostserver" class="inexor_centered_frame">
+      <div class="row inexor_inner_padding">
+         <h4>Start game server</h4>
+         <hr>
+         <label>server name:
+            <input type="text" value="Inexor custom game server" style="width:400px;">
+         </label>
+         <label>port:
+            <input type="number" value="31415" style="width:100px;">
+         </label>
+         <label>password:
+            <input type="password" value="secret" style="width:200px;">
+         </label>
+
+         <div class="inexor_button" id="start_server_button">Start server</div>
+
+
+         <div class="inexor_button button_back_to_main_menu inexor_small_button">back</div>
+      </div>
+   </div>
+
+
    <script src="js/vendor/jquery.js"></script>
    <script src="js/vendor/what-input.js"></script>
    <script src="js/vendor/foundation.js"></script>
    <script src="js/app.js"></script>
 
    <script>
+
    $(document).ready(function(){
 
       // Quit Inexor :(
@@ -492,8 +515,17 @@
          });
       });
 
+      // show Inexor dev blog
+      $('#hostgame_button').click(function() {
+         $('.inexor_centered_frame, #inexor_logo').fadeOut(0);
+         $('.inexor_centered_frame').promise().done(function(){
+            // will be called when all the animations on the queue finish
+            $('#inexor_hostserver').fadeIn(300);
+         });
+      });
 
    });
+
    </script>
 </body>
 </html>
