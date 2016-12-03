@@ -106,6 +106,7 @@ table tbody tr:nth-child(even) {
    margin-top:-150px;
    border:white 1px solid;
    background:rgba(0, 0, 0, 0.8);
+   box-shadow:0px 0px 120px 20px black inset;
 }
 .inexor_big_centered_frame {
    position:absolute;
@@ -117,6 +118,7 @@ table tbody tr:nth-child(even) {
    margin-top:-300px;
    border:white 1px solid;
    background:rgba(0, 0, 0, 0.8);
+   box-shadow:0px 0px 120px 20px black inset;
 }
 
 #inexor_about_window,
