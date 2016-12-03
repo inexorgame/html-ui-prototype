@@ -30,7 +30,7 @@ label {
 table thead {
    border:none;
    background:transparent;
-   border-bottom:rgba(255, 255, 255, 0.5) 1px solid;
+   border-bottom:white 1px solid;
    font-faily:verdana;
 }
 table thead th {
