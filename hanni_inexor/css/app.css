@@ -104,6 +104,7 @@ table tbody tr:nth-child(even) {
    height:500px;
    margin-left:-450px;
    margin-top:-150px;
+   border:white 1px solid;
    background:rgba(0, 0, 0, 0.9);
 }
 .inexor_big_centered_frame {
@@ -114,6 +115,7 @@ table tbody tr:nth-child(even) {
    height:800px;
    margin-left:-700px;
    margin-top:-400px;
+   border:white 1px solid;
    background:rgba(0,0,0, 0.9);
 }
 
