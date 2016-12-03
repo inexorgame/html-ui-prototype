@@ -238,3 +238,8 @@ table tbody tr:nth-child(even) {
    background:rgba(255,255,255, 0.3);
    border-bottom:rgba(255, 255, 255, 0.5) 1px solid;
 }
+
+label, .inexor_input_label
+{
+   color:rgb(150,150,150);
+}

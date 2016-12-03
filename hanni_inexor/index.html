@@ -51,7 +51,7 @@
    <div id="inexor_options_window" class="inexor_big_centered_frame">
       <div class="row" style="margin:0px;">
          <div class="large-12 columns" style="padding:0px;">
-            <ul class="tabs" data-tabs id="example-tabs" style="margin-left:25%;">
+            <ul class="tabs" data-tabs id="example-tabs">
                <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Game</a></li>
                <li class="tabs-title"><a href="#panel2">UI</a></li>
                <li class="tabs-title"><a href="#panel3">HUD</a></li>
@@ -87,9 +87,9 @@
                         <input id="checkbox_ragdoll_respawn_keep" type="checkbox"><label for="checkbox_ragdoll_respawn_keep">keep after respawn</label><br>
                         <input id="checkbox_hide_dead_players" type="checkbox"><label for="checkbox_hide_dead_players">hide dead players</label><br>
                         <br>
-                        ragdoll velocity multiplier<br>
+                        <span class="inexor_input_label">ragdoll velocity multiplier</span><br>
                         <input class="inexor_slider" type="range" min="1" max="20" step="1">
-                        maxroll<br>
+                        <span class="inexor_input_label">maxroll</span><br>
                         <input class="inexor_slider" type="range" min="1" max="20" step="1">
 
                     </div>
@@ -170,12 +170,13 @@
 
                         <input class="inexor_slider" type="range" min="1" max="20" step="1">
                         <br>
-                        models
+                        <span class="inexor_input_label">models</span>
+
                         <input id="checkbox_models_lightning" type="checkbox"><label for="checkbox_models_lightning">lightning</label>
                         <input id="checkbox_models_reflection" type="checkbox"><label for="checkbox_models_reflection">reflection</label>
                         <input id="checkbox_models_glow" type="checkbox"><label for="checkbox_models_glow">glow</label>
                         <br>
-                        animations
+                        <span class="inexor_input_label">animations</span>
                         <input type="radio" name="radio_animations_quality" value="medium_quality" id="medium_anim_quality"><label for="medium_anim_quality">medium quality</label>
                         <input type="radio" name="radio_animations_quality" value="high_quality" id="high_anim_quality"><label for="high_anim_quality">high quality</label>
                         <br>
@@ -193,22 +194,22 @@
                         <input id="checkbox_vsync" type="checkbox"><label for="checkbox_vsync">use vertical synchronisation (v-sync)</label>
                         <br>
                         <br>
-                        gamma
+                        <span class="inexor_input_label">gamma</span>
                         <br>
                         <input class="inexor_slider" type="range" min="1" max="100" step="1">
-                        full-scene anti aliasing
+                        <span class="inexor_input_label">full-scene anti aliasing</span>
                         <br>
                         <input class="inexor_slider" type="range" min="1" max="16" step="1">
-                        color depth
+                        <span class="inexor_input_label">color depth</span>
                         <br>
                         <input class="inexor_slider" type="range" min="1" max="32" step="1">
-                        z-buffer depth
+                        <span class="inexor_input_label">z-buffer depth</span>
                         <br>
                         <input class="inexor_slider" type="range" min="1" max="32" step="1">
-                        stencil bits
+                        <span class="inexor_input_label">stencil bits</span>
                         <br>
                         <input class="inexor_slider" type="range" min="1" max="32" step="1">
-                        anisotropic filtering
+                        <span class="inexor_input_label">anisotropic filtering</span>
                         <br>
                         <input class="inexor_slider" type="range" min="1" max="16" step="1">
                         <br>
@@ -222,7 +223,7 @@
                   <h3>Display resolution</h3><hr>
                   <div class="row">
                      <div class="small-2 large-12 columns">
-                        field of view (fov)
+                        <span class="inexor_input_label">field of view (fov)</span>
                         <br>
                         <input class="inexor_slider" type="range" min="60" max="160" step="1">
                     </div>
