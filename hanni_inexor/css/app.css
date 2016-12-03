@@ -3,7 +3,7 @@
 * Set background image and font specifications
 */
 body {
-   background-image:url('../images/background/background_image.jpeg');
+   background-image:url('../images/background/background_image_2.jpeg');
    font-family:verdana;
    font-size:20px;
    color:white;
@@ -105,29 +105,41 @@ table tbody tr:nth-child(even) {
    margin-left:-450px;
    margin-top:-150px;
    border:white 1px solid;
-   background:rgba(0, 0, 0, 0.9);
+   background:rgba(0, 0, 0, 0.8);
 }
 .inexor_big_centered_frame {
    position:absolute;
    left:50%;
    top:50%;
    width:1400px;
-   height:800px;
+   height:700px;
    margin-left:-700px;
-   margin-top:-400px;
+   margin-top:-300px;
    border:white 1px solid;
-   background:rgba(0,0,0, 0.9);
+   background:rgba(0, 0, 0, 0.8);
 }
-
 
 #inexor_about_window,
 #inexor_options_window,
 #inexor_server_browser,
 #inexor_dev_blog,
 #inexor_loadmap,
-#inexor_hostserver
+#inexor_hostserver,
+#inexor_options_window_tabs
 {
    display:none; /*do not show this in the beginning*/
+}
+
+#inexor_options_window_tabs {
+   position:absolute;
+   left:50%;
+   top:50%;
+   width:1400px;
+   height:55px;
+   margin-left:-700px;
+   margin-top:-370px;
+   border:white 1px solid;
+   background:rgba(0,0,0, 0.9);
 }
 
 .inexor_slider {
@@ -151,7 +163,7 @@ table tbody tr:nth-child(even) {
    padding-left:10px;
 }
 .inexor_button:hover {
-   background:rgba(255,255,255,0.2);
+   background:rgba(102, 102, 102, 0.6);
    text-shadow:1px 1px 3px black,1px 1px 3px black;
 }
 .inexor_small_button {
@@ -161,6 +173,7 @@ table tbody tr:nth-child(even) {
 }
 
 #inxor_profile_picture {
+   border:white 1px solid;
    margin:0px 0px 10px 10px;
 }
 
