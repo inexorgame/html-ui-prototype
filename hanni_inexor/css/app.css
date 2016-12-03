@@ -1,3 +1,7 @@
+
+/**
+* Set background image and font specifications
+*/
 body {
    background-image:url('../images/background/background_image.jpeg');
    font-family:verdana;
@@ -6,6 +10,80 @@ body {
    text-shadow:1px 1px 2px black;
 }
 
+/**
+* overwrie foundation styles
+*/
+a {
+   font-size:16px;
+   color:white;
+   text-shadow:1px 1px 2px black;
+}
+a:hover {
+   color:white;
+}
+label {
+   font-family:verdana;
+   font-size:20px;
+   color:white;
+   text-shadow:1px 1px 2px black;
+}
+table thead {
+   border:none;
+   background:transparent;
+   border-bottom:rgba(255, 255, 255, 0.5) 1px solid;
+   font-faily:verdana;
+}
+table thead th {
+   color:white;
+   text-shadow:1px 1px 2px black;
+   background:transparent;
+   text-align:center;
+   color:white;
+   font-size:14px;
+   text-shadow:1px 1px 2px black;
+   font-faily:verdana;
+}
+table tbody {
+   border:none;
+}
+td {
+   text-align:center;
+   font-size:14px;
+   color:white;
+   background:none;
+   text-shadow:0px 0px 2px black;
+   font-faily:verdana;
+}
+tbody tr:hover {
+   background:rgba(139, 218, 91, 0.36) !important;
+   cursor:pointer;
+}
+table tbody {
+   background-color:rgba(80, 80, 80, 0.4);
+   background-blend-mode: multiply;
+}
+table tbody tr:nth-child(even) {
+   background-color: rgba(75, 75, 75, 0.4);
+   background-blend-mode: multiply;
+}
+
+
+/**
+* Inexor main logo
+*/
+#inexor_logo {
+   position:absolute;
+   left:50%;
+   top:50%;
+   width:600px;
+   height:184px;
+   margin-top:-380px;
+   margin-left:-300px;
+}
+
+/**
+*
+*/
 #beta_decline {
    position:absolute;
    left:10px;
@@ -15,31 +93,30 @@ body {
    width:500px;
 }
 
-a {
-   font-size:16px;
-   color:white;
-   text-shadow:1px 1px 2px black;
+/**
+* main frame classes
+*/
+.inexor_centered_frame {
+   position:absolute;
+   left:50%;
+   top:50%;
+   width:900px;
+   height:500px;
+   margin-left:-450px;
+   margin-top:-150px;
+   background:rgba(0, 0, 0, 0.9);
 }
-a:hover {
-   color:white;
+.inexor_big_centered_frame {
+   position:absolute;
+   left:50%;
+   top:50%;
+   width:1400px;
+   height:800px;
+   margin-left:-700px;
+   margin-top:-400px;
+   background:rgba(0,0,0, 0.9);
 }
 
-.inexor_slider {
-   width:100%;
-}
-
-label {
-   font-family:verdana;
-   font-size:20px;
-   color:white;
-   text-shadow:1px 1px 2px black;
-}
-
-iframe {
-   border:none;
-   width:100%;
-   height:100%;
-}
 
 #inexor_about_window,
 #inexor_options_window,
@@ -51,51 +128,13 @@ iframe {
    display:none; /*do not show this in the beginning*/
 }
 
-#inexor_logo {
-   position:absolute;
-   left:50%;
-   top:50%;
-   width:600px;
-   height:184px;
-   margin-top:-380px;
-   margin-left:-300px;
+.inexor_slider {
+   width:100%;
 }
 
-.inexor_centered_frame {
-   position:absolute;
-   left:50%;
-   top:50%;
-   width:800px;
-   height:500px;
-   margin-left:-400px;
-   margin-top:-150px;
-   background:rgba(0, 0, 0, 0.9);
-   /*
-   box-shadow:0px 0px 200px 100px rgb(0, 0, 0) inset, 0px 0px 25px 4px rgb(0, 0, 0);
-   background-image:url('../images/logo/logo_new.png');
-   background-position:center 50px;
-   background-repeat:no-repeat;
-   */
-}
-
-.inexor_big_centered_frame {
-   /*border-radius:5px;
-   border:rgba(255, 255, 255, 0.2) 1px solid;
-   */
-   position:absolute;
-   left:50%;
-   top:50%;
-   width:1400px;
-   height:800px;
-   margin-left:-700px;
-   margin-top:-400px;
-   background:rgba(0,0,0, 0.9);
-   /*
-   background-image:url('../images/background/inexor_bg_inverted_logo.png');
-   box-shadow:0px 0px 200px 100px rgb(0, 0, 0) inset, 0px 0px 25px 4px rgb(0, 0, 0);
-   */
-}
-
+/**
+* buttons
+*/
 .inexor_button {
    font-size:20px;
    color:white;
@@ -104,29 +143,35 @@ iframe {
    word-spacing:10px;
    letter-spacing:2px;
    line-height:50px;
-   /*text-shadow:1px 1px 4px black;*/
    padding:0px;
-   width:200px;
+   width:230px;
    height:50px;
    padding-left:10px;
 }
-
+.inexor_button:hover {
+   background:rgba(255,255,255,0.2);
+   text-shadow:1px 1px 3px black,1px 1px 3px black;
+}
 .inexor_small_button {
    width:100px;
    padding-left:0px;
    text-align:center;
 }
 
-.inexor_button:hover {
-   background:linear-gradient(rgba(255, 255, 255, 0.6), rgba(255, 255, 255, 0.21));
-   text-shadow:1px 1px 3px black,1px 1px 3px black;
+#inxor_profile_picture {
+   margin:0px 0px 10px 10px;
 }
 
-#inexor_main_menu_button_area {
-   margin:50px 0px 0px 40px;
-   position:absolute;
-   left:0px;
-   top:0px;
+#inexor_nickname,
+#inexor_teamtag
+{
+   margin-left:10px;
+   margin-top:10px;
+   height:40px;
+}
+
+#inexor_mainmenu_right {
+   margin:50px 0px 0px 500px;
    width:200px;
 }
 
@@ -136,13 +181,16 @@ iframe {
    max-width:100%;
 }
 
-#inexor_main_menu_profile {
-   margin:50px 0px 0px 250px;
+/**
+* button field
+*/
+.inexor_button_field {
    position:absolute;
    left:0px;
    top:0px;
    width:200px;
 }
+
 
 .inexor_text {
    font-size:20px;
@@ -155,9 +203,6 @@ iframe {
    padding:0px;
    width:200px;
    height:50px;
-}
-
-.inexor_input {
 }
 
 .button_back_to_main_menu {
@@ -190,50 +235,4 @@ iframe {
 .tabs-title > a:focus, .tabs-title > a[aria-selected="true"] {
    background:rgba(255,255,255, 0.3);
    border-bottom:rgba(255, 255, 255, 0.5) 1px solid;
-}
-
-table thead {
-   border:none;
-   background:transparent;
-   border-bottom:rgba(255, 255, 255, 0.5) 1px solid;
-   font-faily:verdana;
-}
-
-table thead th {
-   color:white;
-   text-shadow:1px 1px 2px black;
-   background:transparent;
-   text-align:center;
-   color:white;
-   font-size:14px;
-   text-shadow:1px 1px 2px black;
-   font-faily:verdana;
-}
-
-table tbody {
-   border:none;
-}
-
-td {
-   text-align:center;
-   font-size:14px;
-   color:white;
-   background:none;
-   text-shadow:0px 0px 2px black;
-   font-faily:verdana;
-}
-
-tbody tr:hover {
-   background:rgba(139, 218, 91, 0.36) !important;
-   cursor:pointer;
-}
-
-table tbody {
-   background-color:rgba(80, 80, 80, 0.4);
-   background-blend-mode: multiply;
-}
-
-table tbody tr:nth-child(even) {
-   background-color: rgba(75, 75, 75, 0.4);
-   background-blend-mode: multiply;
 }

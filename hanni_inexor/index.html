@@ -10,30 +10,40 @@
    </head>
 <body>
 
+   <!-- Inexor main logo -->
    <div id="inexor_logo">
-      <img src="images/logo/logo_new.png" alt="error: Logo image not found!">
+      <img src="images/logo/logo_new.png" alt="error: logo image not found!">
    </div>
 
-   <div id="inexor_main_menu" class="inexor_centered_frame">
-      <div id="inexor_main_menu_button_area">
+   <!-- #inexor_main_menu_window has no CSS specifications but is reqired for jQuery access -->
+   <div id="inexor_main_menu_window" class="inexor_centered_frame">
+
+      <div class="inexor_button_field" style="margin:60px 0px 0px 50px;">
          <div class="inexor_button" id="multiplayer_button">Multiplayer</div>
-         <div class="inexor_button" id="loadmap_button">Load map</div>
-         <div class="inexor_button" id="hostgame_button">Host server</div>
-         <div class="inexor_button" id="devblog_button">Inexor blog</div>
+         <div class="inexor_button" id="loadmap_button">Load Map</div>
+         <div class="inexor_button" id="hostgame_button">Start Server</div>
          <div class="inexor_button" id="options_button">Options</div>
          <div class="inexor_button" id="about_button">About</div>
          <div class="inexor_button" id="quit_button">Quit</div>
       </div>
-      <div id="inexor_main_menu_profile">
+
+      <div class="inexor_button_field" style="margin:60px 0px 0px 320px;">
          <div class="inexor_text">
-            <!-- My Profile<br>
-            <img src="images/profile/profile_picture.jpeg" alt="error: could not load profile picture =("><br>
-            -->
-            <div class="inexor_button" id="profile_button">My Profile</div>
+            <img id="inxor_profile_picture" src="images/profile/profile_picture.jpeg" alt="error: could not load profile picture =("><br>
             <div class="inexor_button" id="playermodel_button">Playermodel</div>
             <div class="inexor_button" id="crosshair_button">Crosshair</div>
+            <div class="inexor_button" id="crosshair_button">Spray Icon</div>
          </div>
       </div>
+
+      <div class="inexor_button_field" style="margin:60px 0px 0px 600px;">
+         <div class="inexor_button" id="irc_button">Global Chat</div>
+         <div class="inexor_button" id="devblog_button">Inexor Blog</div>
+         <div class="inexor_button" id="report_bug_button">Report Bugs</div>
+         <div class="inexor_button" id="request_feature_button">Feature Request</div>
+         <div class="inexor_button" id="techdemo_button">Tech Demos</div>
+      </div>
+
    </div>
 
    <div id="beta_decline">The work on this UI is not finished yet!<br>Status: Pre-release Alpha! <br>You should test this with Google Chrome! <br>-Hanni</div>
@@ -422,7 +432,6 @@
       </div>
    </div>
 
-
    <div id="inexor_hostserver" class="inexor_centered_frame">
       <div class="row inexor_inner_padding">
          <h4>Start game server</h4>
@@ -461,8 +470,8 @@
 
       // Open about window
       $("#about_button").click(function(){
-         $('#inexor_main_menu, #inexor_logo').fadeOut(0);
-         $('#inexor_main_menu').promise().done(function(){
+         $('#inexor_main_menu_window, #inexor_logo').fadeOut(0);
+         $('#inexor_main_menu_window').promise().done(function(){
             // will be called when all the animations on the queue finish
             $('#inexor_about_window, #inexor_logo').fadeIn(300);
          });
@@ -470,8 +479,8 @@
 
       // Show options
       $("#options_button").click(function(){
-         $('#inexor_main_menu, #inexor_logo').fadeOut(0);
-         $('#inexor_main_menu').promise().done(function(){
+         $('#inexor_main_menu_window, #inexor_logo').fadeOut(0);
+         $('#inexor_main_menu_window').promise().done(function(){
             // will be called when all the animations on the queue finish
             $('#inexor_options_window').fadeIn(300);
          });
@@ -482,7 +491,7 @@
          $('.inexor_centered_frame, .inexor_big_centered_frame').fadeOut(0);
          $('.inexor_centered_frame, .inexor_big_centered_frame').promise().done(function(){
             // will be called when all the animations on the queue finish
-            $('#inexor_main_menu, #inexor_logo').fadeIn(300);
+            $('#inexor_main_menu_window, #inexor_logo').fadeIn(300);
          });
       });
 
