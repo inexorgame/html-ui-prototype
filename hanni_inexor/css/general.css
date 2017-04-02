@@ -1,0 +1,70 @@
+body {
+   background-image:url('../images/background/background_image_2.jpeg');
+   font-family:verdana;
+   font-size:20px;
+   color:white;
+   text-shadow:1px 1px 2px black;
+}
+
+a {
+   font-size:16px;
+   color:white;
+   text-shadow:1px 1px 2px black;
+}
+
+a:hover {
+   color:white;
+}
+
+label {
+   font-family:verdana;
+   font-size:20px;
+   color:white;
+   text-shadow:1px 1px 2px black;
+}
+
+table thead {
+   border:none;
+   background:transparent;
+   border-bottom:white 1px solid;
+   font-faily:verdana;
+}
+
+table thead th {
+   color:white;
+   text-shadow:1px 1px 2px black;
+   background:transparent;
+   text-align:left;
+   color:white;
+   font-size:14px;
+   text-shadow:1px 1px 2px black;
+   font-faily:verdana;
+}
+
+table tbody {
+   border:none;
+}
+
+td {
+   text-align:left;
+   font-size:14px;
+   color:white;
+   background:none;
+   text-shadow:0px 0px 2px black;
+   font-faily:verdana;
+}
+
+tbody tr:hover {
+   background:rgba(139, 218, 91, 0.36) !important;
+   cursor:pointer;
+}
+
+table tbody {
+   background-color:rgba(80, 80, 80, 0.4);
+   background-blend-mode: multiply;
+}
+
+table tbody tr:nth-child(even) {
+   background-color: rgba(75, 75, 75, 0.4);
+   background-blend-mode: multiply;
+}

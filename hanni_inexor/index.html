@@ -1,4 +1,9 @@
 <!doctype html>
+<!--
+- Inexor User Interface (UI)
+- www.inexor.org - Join the development!
+- Written by IAmNotHanni.
+-->
 <html class="no-js" lang="en" dir="ltr">
    <head>
       <meta charset="utf-8">
@@ -6,80 +11,89 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Inexor UI</title>
       <link rel="stylesheet" href="css/foundation.css">
-      <link rel="stylesheet" href="css/app.css">
+      <link rel="stylesheet" href="css/general.css">
+      <link rel="stylesheet" href="css/inexor.css">
    </head>
 <body>
 
-   <!-- Inexor main logo -->
+   <!-- The Inexor main logo will always be displayed except when big windows are shown-->
    <div id="inexor_logo">
       <img src="images/logo/logo_new.png" alt="error: logo image not found!">
    </div>
 
-   <!-- #inexor_main_menu_window has no CSS specifications but is reqired for jQuery access -->
-   <div id="inexor_main_menu_window" class="inexor_centered_frame">
 
-      <div class="inexor_button_field" style="margin:60px 0px 0px 50px;">
-         <div class="inexor_button" id="nickname_button" style="padding:0px; text-align:center;"><span class="inexor_blinking_text">-CLAN-</span>Nickname</div>
-         <img id="inxor_profile_picture" src="images/profile/profile_picture.jpeg" alt="error: could not load profile picture =("><br>
+   <!-- #inexor_main_menu_window has no CSS specifications but is reqired for jQuery access! -->
+   <div id="inexor_window_mainmenu" class="inexor_centered_frame">
+
+      <!-- Display profile picture and user name with clantag (its a button, click to change) -->
+      <div class="inexor_button_field" style="margin-left:50px;">
+         <div class="inexor_button" id="inexor_button_nickname" style="padding:0px; text-align:center;">
+            <span class="inexor_blinking_text">[CLAN]</span>Nickname</div>
+         <img id="inxor_profile_picture" src="images/profile/profile_picture.jpeg" alt="error: could not load profile picture!">
       </div>
 
-      <div class="inexor_button_field" style="margin:60px 0px 0px 340px;">
-         <div class="inexor_button" id="multiplayer_button">Multiplayer</div>
-         <div class="inexor_button" id="loadmap_button">Singleplayer</div>
-         <div class="inexor_button" id="hostgame_button">Start Server</div>
-         <div class="inexor_button" id="options_button">Options</div>
-         <div class="inexor_button" id="about_button">About</div>
-         <div class="inexor_button" id="quit_button">Quit</div>
+      <!-- The button field in the middle -->
+      <div class="inexor_button_field" style="margin-left:340px;">
+         <div class="inexor_button" id="inexor_button_multiplayer">Multiplayer</div>
+         <div class="inexor_button" id="inexor_button_loadmap">Singleplayer</div>
+         <div class="inexor_button" id="inexor_button_hostgame">Start Server</div>
+         <div class="inexor_button" id="inexor_button_options">Options</div>
+         <div class="inexor_button" id="inexor_button_about">About</div>
+         <div class="inexor_button" id="inexor_button_quit">Quit</div>
       </div>
 
-      <div class="inexor_button_field" style="margin:60px 0px 0px 600px;">
-         <div class="inexor_button" id="devblog_button">Inexor Blog</div>
-         <div class="inexor_button" id="devblog_button">Online Maps</div>
-         <div class="inexor_button" id="irc_button">Global Chat</div>
-         <div class="inexor_button" id="report_bug_button">Bug Report</div>
-         <div class="inexor_button" id="request_feature_button">Feature Request</div>
-         <div class="inexor_button" id="techdemo_button">Engine Tests</div>
+      <!-- The button field in the right -->
+      <div class="inexor_button_field" style="margin-left:600px;">
+         <div class="inexor_button" id="inexor_button_devblog">Inexor Blog</div>
+         <div class="inexor_button" id="inexor_button_quadropolis">Online Maps</div>
+         <div class="inexor_button" id="inexor_button_ircchat">Global Chat</div>
+         <div class="inexor_button" id="inexor_button_bugreport">Bug Report</div>
+         <div class="inexor_button" id="inexor_button_featurerequest">Feature Request</div>
+         <div class="inexor_button" id="inexor_button_techdemo">Engine Tests</div>
       </div>
-
    </div>
 
+
+   <!-- This will be removed later on... -->
    <div id="beta_decline">
-      <!--
-      The work on this UI is not finished yet!<br>Status: Pre-release Alpha! <br>You should test this with Google Chrome! <br>-Hanni
-   -->
+      The work on this UI is not finished yet
+      <br>Status: Pre-release Alpha
+      <br>You should test this with Google Chrome
+      <br>-Hanni
    </div>
 
-   <div id="inexor_options_window_tabs">
+
+   <!-- The tab buttons are not part of the options window itself. They are placed above the options window. -->
+   <div id="inexor_window_options_tabs">
       <ul class="tabs" data-tabs id="example-tabs">
-         <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Game</a></li>
-         <li class="tabs-title"><a href="#panel2">UI</a></li>
-         <li class="tabs-title"><a href="#panel3">HUD</a></li>
-         <li class="tabs-title"><a href="#panel4">Graphics</a></li>
-         <li class="tabs-title"><a href="#panel5">Display</a></li>
-         <li class="tabs-title"><a href="#panel6">Resolution</a></li>
-         <li class="tabs-title"><a href="#panel7">Sound</a></li>
-         <li class="tabs-title"><a href="#panel8">Mouse</a></li>
-         <li class="tabs-title"><a href="#panel9">Keys</a></li>
-         <li class="tabs-title"><a href="#panel10">Console</a></li>
+         <li class="tabs-title is-active"><a href="#inexor_options_tab_game" aria-selected="true">Game</a></li>
+         <li class="tabs-title"><a href="#inexor_options_tab_ui">UI</a></li>
+         <li class="tabs-title"><a href="#inexor_options_tab_hud">HUD</a></li>
+         <li class="tabs-title"><a href="#inexor_options_tab_graphics">Graphics</a></li>
+         <li class="tabs-title"><a href="#inexor_options_tab_display">Display</a></li>
+         <li class="tabs-title"><a href="#inexor_options_tab_resolution">Resolution</a></li>
+         <li class="tabs-title"><a href="#inexor_options_tab_sound">Sound</a></li>
+         <li class="tabs-title"><a href="#inexor_options_tab_mouse">Mouse</a></li>
+         <li class="tabs-title"><a href="#inexor_options_tab_keys">Keys</a></li>
+         <li class="tabs-title"><a href="#inexor_options_tab_console">Console</a></li>
+         <!-- TODO: enlarge... -->
       </ul>
    </div>
 
-   <div id="inexor_options_window" class="inexor_big_centered_frame">
 
+   <!-- The options window displays all available options and is copied from Cube2's options menu -->
+   <div id="inexor_window_options" class="inexor_big_centered_frame">
       <div class="row" style="margin:0px;">
-
          <div class="large-12 columns" style="padding:0px;">
-
             <div class="tabs-content" data-tabs-content="example-tabs">
 
-               <div class="tabs-panel is-active" id="panel1">
+               <div class="tabs-panel is-active" id="inexor_options_tab_game">
                   <div class="row">
                      <div class="small-2 large-6 columns">
                         <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">show FPS</label><br>
                         <input id="checkbox_wall_clock" type="checkbox"><label for="checkbox_wall_clock">show clock</label>
                         <input id="checkbox_24_hours" type="checkbox"><label for="checkbox_24_hours">24h format</label>
                         <input id="checkbox_clock_sec" type="checkbox"><label for="checkbox_clock_sec">seconds</label><br>
-
                         <input id="checkbox_show_fps" type="checkbox"><label for="checkbox_show_fps">2D menus</label><br>
                         <input id="checkbox_death_scoreboard" type="checkbox"><label for="checkbox_death_scoreboard">show scoreboard at death</label><br>
                         <input id="checkbox_dmg_screen" type="checkbox"><label for="checkbox_dmg_screen">damage screen</label>
@@ -122,7 +136,7 @@
                   </div>
                </div>
 
-               <div class="tabs-panel" id="panel2">
+               <div class="tabs-panel" id="inexor_options_tab_ui">
                   <div class="row">
                      <div class="small-2 large-12 columns">
                         UI settings...
@@ -130,7 +144,7 @@
                   </div>
                </div>
 
-               <div class="tabs-panel" id="panel3">
+               <div class="tabs-panel" id="inexor_options_tab_hud">
                   <div class="row">
                      <div class="small-2 large-12 columns">
                         HUD settings...
@@ -138,7 +152,7 @@
                   </div>
                </div>
 
-               <div class="tabs-panel" id="panel3">
+               <div class="tabs-panel" id="inexor_options_tab_graphics">
                   <div class="row">
                      <div class="small-2 large-12 columns">
                         <input id="checkbox_shaders" type="checkbox"><label for="checkbox_shaders">enable shaders</label>
@@ -188,7 +202,7 @@
                   </div>
                </div>
 
-               <div class="tabs-panel" id="panel4">
+               <div class="tabs-panel" id="inexor_options_tab_display">
                   <div class="row">
                      <div class="small-2 large-12 columns">
                         <input id="checkbox_fullscreen" type="checkbox"><label for="checkbox_fullscreen">fullscreen</label>
@@ -221,7 +235,7 @@
                   </div>
                </div>
 
-               <div class="tabs-panel" id="panel5">
+               <div class="tabs-panel" id="inexor_options_tab_resolution">
                   <div class="row">
                      <div class="small-2 large-12 columns">
                         <span class="inexor_input_label">field of view (fov)</span>
@@ -231,7 +245,7 @@
                   </div>
                </div>
 
-               <div class="tabs-panel" id="panel6">
+               <div class="tabs-panel" id="inexor_options_tab_sound">
                   <div class="row">
                      <div class="small-2 large-12 columns">
                         master volume
@@ -253,7 +267,7 @@
                   </div>
                </div>
 
-               <div class="tabs-panel" id="panel7">
+               <div class="tabs-panel" id="inexor_options_tab_mouse">
                   <div class="row">
                      <div class="small-2 large-12 columns">
                         <input id="checkbox_invert_mouse" type="checkbox"><label for="checkbox_invert_mouse">invert mouse</label>
@@ -271,19 +285,21 @@
                   </div>
                </div>
 
-               <div class="tabs-panel" id="panel8">
+               <div class="tabs-panel" id="inexor_options_tab_keys">
                </div>
 
-               <div class="tabs-panel" id="panel9">
+               <div class="tabs-panel" id="inexor_options_tab_console">
                </div>
 
-               <div class="inexor_button button_back_to_main_menu">back</div>
+               <div class="inexor_button inexor_button_backtomainmenu">back</div>
             </div>
          </div>
       </div>
    </div>
 
-   <div id="inexor_server_browser" class="inexor_big_centered_frame">
+
+   <!-- The server browser -->
+   <div id="inexor_window_serverbrowser" class="inexor_big_centered_frame">
       <table>
         <thead>
           <tr>
@@ -400,139 +416,62 @@
          </tr>
         </tbody>
       </table>
-      <div class="inexor_button button_back_to_main_menu">back</div>
+      <div class="inexor_button inexor_button_backtomainmenu">back</div>
    </div>
 
-   <div id="inexor_dev_blog" class="inexor_big_centered_frame">
+
+   <!-- TODO: embedd Inexor website here (?) -->
+   <div id="inexor_window_devblog" class="inexor_big_centered_frame">
       <div class="row inexor_inner_padding">
          <h2>This is the development blog...</h2>
          <br>
          TODO: embedd www.inexor.org here?
-         <div class="inexor_button button_back_to_main_menu">back</div>
+         <div class="inexor_button inexor_button_backtomainmenu">back</div>
       </div>
    </div>
 
-   <div id="inexor_about_window" class="inexor_centered_frame">
+
+   <!-- Some infos about this project -->
+   <div id="inexor_window_about" class="inexor_centered_frame">
       <div class="row inexor_inner_padding">
          <h2>Inexor</h2>
          Inexor is an open source game made by gamers for gamers. This project started in 2011 as a fork of Cube2: Sauerbraten.
          <br>
-         <div class="inexor_button button_back_to_main_menu">back</div>
+         <div class="inexor_button inexor_button_backtomainmenu">back</div>
       </div>
    </div>
 
-   <div id="inexor_loadmap" class="inexor_big_centered_frame">
+
+   <!-- Load a map/mode -->
+   <div id="inexor_window_loadmap" class="inexor_big_centered_frame">
       <div class="row inexor_inner_padding">
          <h2>Load a map</h2>
          Select a map to load...
-         <br><br><br>
-         <div class="inexor_button button_back_to_main_menu">back</div>
-      </div>
-   </div>
-
-   <div id="inexor_hostserver" class="inexor_centered_frame">
-      <div class="row inexor_inner_padding">
-         <h4>Start game server</h4>
-         <hr>
-         <label>server name:
-            <input type="text" value="Inexor custom game server" style="width:400px;">
-         </label>
-         <label>port:
-            <input type="number" value="31415" style="width:100px;">
-         </label>
-         <label>password:
-            <input type="password" value="secret" style="width:200px;">
-         </label>
-
-         <div class="inexor_button" id="start_server_button">Start server</div>
-
-
-         <div class="inexor_button button_back_to_main_menu">back</div>
+         <div class="inexor_button inexor_button_backtomainmenu">back</div>
       </div>
    </div>
 
 
+   <!-- Host a game server -->
+   <div id="inexor_window_startserver" class="inexor_centered_frame">
+      <div id="inexor_server_options_window_tabs">
+         <ul class="tabs" data-tabs id="example-tabs">
+            <li class="tabs-title is-active"><a href="#server_panel1" aria-selected="true">General</a></li>
+            <li class="tabs-title"><a href="#server_panel2">Network</a></li>
+            <li class="tabs-title"><a href="#server_panel3">Maps/Modes</a></li>
+            <li class="tabs-title"><a href="#server_panel4">Security</a></li>
+            <li class="tabs-title"><a href="#server_panel5">Anticheat</a></li>
+         </ul>
+      </div>
+      <div class="inexor_button inexor_button_backtomainmenu">back</div>
+   </div>
+
+
+   <!-- Javascript -->
    <script src="js/vendor/jquery.js"></script>
    <script src="js/vendor/what-input.js"></script>
    <script src="js/vendor/foundation.js"></script>
    <script src="js/app.js"></script>
 
-   <script>
-
-   $(document).ready(function(){
-
-      // Quit Inexor :(
-      $("#quit_button").click(function(){
-         alert('You quit Inexor :(');
-      });
-
-      // Open about window
-      $("#about_button").click(function(){
-         $('#inexor_main_menu_window, #inexor_logo').fadeOut(0);
-         $('#inexor_main_menu_window').promise().done(function(){
-            // will be called when all the animations on the queue finish
-            $('#inexor_about_window, #inexor_logo').fadeIn(300);
-         });
-      });
-
-      // Show options
-      $("#options_button").click(function(){
-         $('#inexor_main_menu_window, #inexor_logo').fadeOut(0);
-         $('#inexor_main_menu_window').promise().done(function(){
-            // will be called when all the animations on the queue finish
-            $('#inexor_options_window,#inexor_options_window_tabs').fadeIn(300);
-         });
-      });
-
-      // back to main menu button
-      $('.button_back_to_main_menu').click(function() {
-         $('.inexor_centered_frame, .inexor_big_centered_frame, #inexor_options_window_tabs').fadeOut(0);
-         $('.inexor_centered_frame, .inexor_big_centered_frame').promise().done(function(){
-            // will be called when all the animations on the queue finish
-            $('#inexor_main_menu_window, #inexor_logo').fadeIn(300);
-         });
-      });
-
-
-      // back to main menu button
-      $('#multiplayer_button').click(function() {
-         $('.inexor_centered_frame, #inexor_logo').fadeOut(0);
-         $('.inexor_centered_frame').promise().done(function(){
-            // will be called when all the animations on the queue finish
-            $('#inexor_server_browser').fadeIn(300);
-         });
-      });
-
-
-      // show Inexor dev blog
-      $('#devblog_button').click(function() {
-         $('.inexor_centered_frame, #inexor_logo').fadeOut(0);
-         $('.inexor_centered_frame').promise().done(function(){
-            // will be called when all the animations on the queue finish
-            $('#inexor_dev_blog').fadeIn(300);
-         });
-      });
-
-      // show Inexor dev blog
-      $('#loadmap_button').click(function() {
-         $('.inexor_centered_frame, #inexor_logo').fadeOut(0);
-         $('.inexor_centered_frame').promise().done(function(){
-            // will be called when all the animations on the queue finish
-            $('#inexor_loadmap').fadeIn(300);
-         });
-      });
-
-      // show Inexor dev blog
-      $('#hostgame_button').click(function() {
-         $('.inexor_centered_frame, #inexor_logo').fadeOut(0);
-         $('.inexor_centered_frame').promise().done(function(){
-            // will be called when all the animations on the queue finish
-            $('#inexor_hostserver').fadeIn(300);
-         });
-      });
-
-   });
-
-   </script>
 </body>
 </html>
