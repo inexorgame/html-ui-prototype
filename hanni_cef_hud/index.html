@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Inexor CEF</title>
+</head>
+
+<style type="text/css">
+
+body {
+   font-family: arial, verdana;
+   background-image:url('dust6.jpg');
+}
+
+#inexor_hud {
+   position:absolute;
+   left:0px;
+   top:0px;
+   width:100%;
+   height:92%;
+}
+
+#inexor_ctf_flag {
+   position:absolute;
+   left:50%;
+   top:90%;
+   margin-bottom:100px;
+}
+
+#inexor_health {
+   position:absolute;
+   left:50px;
+   top:calc(100% - 50px);
+   background-color:rgba(108, 206, 202, 1);
+   border:rgba(0,0,0, 0.7) 1px solid;
+   box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+   width:300px;
+   height:28px;
+   line-height:28px;
+   text-align:center;
+   color:white;
+   text-shadow:0px 0px 3px black,0px 0px 3px black;
+}
+
+#inexor_armor {
+   position:absolute;
+   left:50px;
+   top:100%;
+   background-color:rgba(255, 50, 50, 1);
+   border:rgba(0,0,0, 0.7) 1px solid;
+   box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
+   width:300px;
+   height:28px;
+   line-height:28px;
+   text-align:center;
+   color:white;
+   text-shadow:0px 0px 3px black,0px 0px 3px black;
+}
+
+</style>
+
+<body>
+   
+   <div id="inexor_hud">
+      <div id="inexor_health">
+      100%
+      </div>
+      <div id="inexor_armor">
+      100%
+      </div>
+      <div id="inexor_ctf_flag">
+      FLAG!
+      </div>
+   </div>
+
+</body>
+</html>
