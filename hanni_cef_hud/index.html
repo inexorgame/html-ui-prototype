@@ -22,39 +22,49 @@ body {
 
 #inexor_ctf_flag {
    position:absolute;
-   left:50%;
-   top:90%;
-   margin-bottom:100px;
+   left:40%;
+   top:calc(100% - 40px);
+}
+
+#inexor_ammo {
+   position:absolute;
+   left:60%;
+   top:calc(100% - 40px);
+}
+
+#inexor_ammo_count {
+   position:absolute;
+   left:calc(60% + 80px);
+   top:calc(100% - 28px);
+   font-size:40px;
+   line-height:40px;
+   color:black;
+   text-shadow:0px 0px 3px white;
+}
+
+.inexor_health_bar {
+   background-color:rgba(227, 55, 54, 1);
+   box-shadow: 0px 0px 6px 2px rgba(0,0,0,0.8);
+   width:280px;
+   height:25px;
+   line-height:25px;
+   text-align:right;
+   padding-right:20px;
+   color:black;
+   border:rgba(255,255,255,0.3) 1px solid;
 }
 
 #inexor_health {
    position:absolute;
    left:50px;
-   top:calc(100% - 50px);
-   background-color:rgba(108, 206, 202, 1);
-   border:rgba(0,0,0, 0.7) 1px solid;
-   box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
-   width:300px;
-   height:28px;
-   line-height:28px;
-   text-align:center;
-   color:white;
-   text-shadow:0px 0px 3px black,0px 0px 3px black;
+   top:100%;
 }
 
 #inexor_armor {
    position:absolute;
    left:50px;
-   top:100%;
-   background-color:rgba(255, 50, 50, 1);
-   border:rgba(0,0,0, 0.7) 1px solid;
-   box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.5);
-   width:300px;
-   height:28px;
-   line-height:28px;
-   text-align:center;
-   color:white;
-   text-shadow:0px 0px 3px black,0px 0px 3px black;
+   top:calc(100% - 40px);
+   background-color:rgb(105, 184, 210);
 }
 
 </style>
@@ -62,15 +72,26 @@ body {
 <body>
    
    <div id="inexor_hud">
-      <div id="inexor_health">
-      100%
+      <div class="inexor_health_bar" id="inexor_health">
+      100
       </div>
-      <div id="inexor_armor">
-      100%
+
+      <div class="inexor_health_bar" id="inexor_armor">
+      100
       </div>
+
       <div id="inexor_ctf_flag">
-      FLAG!
+         <img src="flag.png">
       </div>
+
+      <div id="inexor_ammo">
+         <img src="ammo_rifle.png">
+      </div>
+
+      <div id="inexor_ammo_count">
+         100
+      </div>
+
    </div>
 
 </body>
