@@ -3,7 +3,7 @@ ui-prototype
 
 Prototypes for menus, hud etc. using the CEF (HTML, CSS, JS).
 
-[Demos are available here](https://inexor-game.github.io/ui-prototype/).
+[Demos are available here](https://inexorgame.github.io/ui-prototype/).
 
 ## Components
 
@@ -25,11 +25,8 @@ We will build some components from scratch, having weblike UI in a Game has to b
 
 There are more to come. We have to find that out by thinking about the existing menus and what elements we want to use in order to control them.
 
-Game-level components are [listed in the wiki](https://github.com/inexor-game/code/wiki/UI-Components).
+Game-level components are [listed in the wiki](https://github.com/inexorgame/inexor-core/wiki/UI-Components).
 
-## TODO
-
-Partially copied from https://pad.inexor.org/p/ui
 
 ### HUDS
 * Mouse hidden
@@ -96,4 +93,3 @@ Partially copied from https://pad.inexor.org/p/ui
 * Cubesize
 * Worldsize
 * Octree Stats
-
